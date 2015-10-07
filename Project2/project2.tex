@@ -1,0 +1,129 @@
+\documentclass[11pt,a4paper,oneside]{article}\usepackage{longtable}\usepackage{lscape}\usepackage{graphicx}\usepackage{amsfonts}\usepackage{amsmath}\usepackage{amsthm}\usepackage{amssymb}\usepackage{calc}\usepackage[cp1252]{inputenc}\usepackage[left=1.0in,right=1.5in,top=1.0in,bottom=1.0in,includeheadfoot]{geometry}\usepackage{fancyhdr}\usepackage{hyperref}\pagestyle{fancy}\fancyhead[LO]{\nouppercase{\leftmark}}\fancyhead[R]{\nouppercase{\rightmark}}\fancyhead[RO]{\thepage}\fancyfoot[LO]{\today}\fancyfoot[C]{}\fancyfoot[R]{FYS4150}\renewcommand{\footrulewidth}{0.5 pt}\setlength{\headheight}{16.0 pt}\begin{document}\title{\textbf{\textbf{\Huge Project 2}}}\author{Jose Emilio Ruiz Navarro}\maketitle
+	
+	\section{Introduction}
+	
+		All the files are located here: \url{https://github.com/jeruiznavarro/FYS3150/tree/master/Project2}.\\
+	
+		The Schrödinger equation is one of the basic pillars of quantum mechanics, it is one of the most important equations in Physics and its practical applications are many; but sadly it's only analytically solvable in a few very simple cases, and for almost all realistic systems there is no exact solution. This means that a numerical solution is required, and this is the objective in this project: to find the eigenvalues and eigenvectors of the Schrödinger equation for a system composed of one and two electrons under the influence of a spherically symmetric harmonic potential in three dimensions with and without electrostatic repulsion. To achieve this, the equation is discretized and the problem becomes a linear algebra one, then, using the Jacobi rotation method, the eigenvalues and eigenvectors of the radial part of the equation are found. Measuring the quality of different discretizations and a performance comparison with Householder's algorithm are performed as well.\\
+	
+	\section{Theory and methods}
+	
+		The time-independent radial Schrödinger equation for an electron reads:\\
+	
+		\begin{equation*}\left(\frac{-\hbar}{2m}\left[\frac{1}{r^2}\frac{d}{dr}r^2\frac{d}{dr}-\frac{l\left(l+1\right)}{r^2}\right]+V\left(r\right)\right)R\left(r\right)=ER\left(r\right)\end{equation*}\\
+	
+		Since the potential is harmonic ($V\left(r\right)=\frac{1}{2}m\omega^2r^2=\frac{1}{2}kr^2$), the solutions to the equation are the Hermite polynomials and the energies are:\\
+	
+		\begin{equation*}E_n=\hbar\omega\left(2n+l+\frac{3}{2}\right)\end{equation*}\\
+	
+		Where $l$ y the orbital momentum of the system and $n$ is the energy level, both are integers and start at $0$. In this project $l$ will be set to be null. Manipulating the equation a simpler version can be obtained: firstly $R\left(r\right)$ can be substituted by $u\left(r\right)/r$ with $u\left(0\right)=u\left(\infty\right)=0$, secondly the variable $r$ can be exchanged with the dimensionless variable $\rho=\frac{r}{\alpha}$. The result is:\\
+	
+		\begin{equation*}\frac{-\hbar^2}{2m\alpha^2}\frac{d^2u\left(\rho\right)}{d\rho^2}+\frac{k\alpha^2\rho^2u\left(\rho\right)}{2}=E_nu\left(\rho\right)\end{equation*}\\
+	
+		Multiplying both sides by $2m\alpha^2/\hbar^2$ and fixing $\alpha=\left(\frac{\hbar^2}{mk}\right)^\frac{1}{4}$ the equation ends up as:\\
+	
+		\begin{equation*}-\frac{d^2u\left(\rho\right)}{d\rho^2}+\rho^2u\left(\rho\right)=\frac{2m\alpha^2E_n}{\hbar^2}u\left(\rho\right)=\lambda_nu\left(\rho\right)\end{equation*}\\
+	
+		For this case $\frac{2m\alpha^2E_n}{\hbar^2}=\lambda_n=3+4n$ where $n=0,1,2...$. Discretizing the second derivative in the equation the problem can be probed with numerical methods using a step length $h$:\\
+	
+		\begin{equation*}-\frac{u\left(\rho_i+h\right)-2u\left(\rho_i\right)+u\left(\rho_i-h\right)}{h^2}+\rho_i^2u\left(\rho_i\right)=\lambda u\left(\rho\right)\end{equation*}\\
+	
+		Where $\rho_i=ih$ with $i=0,1,...,n_{steps}$. This sets a convenient maximum value for the radial variable ($\rho_{max}=hn_{steps}$) since no computer could cover the entire range between $\rho=0$ and $\rho=\infty$. One has to be careful not to choose a small value for $\rho_{max}$. Now, considering the discrete nature of the previous equation, a matrix eigenvalue formulation is now possible:\\
+	
+		\tiny\begin{equation*}\frac{1}{h^2}\left(\begin{array}{ccccccc}
+			2+1^2h^4 & -1 & 0 & \dots & \dots & \dots & 0\\
+			-1 & 2+2^2h^4 & -1 & 0 & \dots & \dots & 0\\
+			0 & -1 & 2+3^2h^4 & -1 & 0 & \dots & 0\\
+			0 & \ddots & \ddots & \ddots & \ddots & \ddots & 0\\
+			0 & \dots & 0 & -1 & 2+\left(n_s-3\right)^2h^4 & -1 & 0\\
+			0 & \dots & \dots &  0 & -1 & 2+\left(n_s-2\right)^2h^4 & -1\\
+			0 & \dots & \dots & \dots & 0 &-1 & 2+\left(n_s-1\right)^2h^4\\
+		\end{array}\right)\left(\begin{array}{c}
+			u_1\\
+			u_2\\
+			\vdots\\
+			\vdots\\
+			\vdots\\
+			u_{n_s-2}\\
+			u_{n_s-1}\\
+		\end{array}\right)=\lambda\left(\begin{array}{c}
+			u_1\\
+			u_2\\
+			\vdots\\
+			\vdots\\
+			\vdots\\
+			u_{n_s-2}\\
+			u_{n_s-1}\\
+		\end{array}\right)\end{equation*}\\\normalsize
+
+		Where $n_s$ just means $n_{steps}$. If there are two electrons, the Coulomb electrostatic interaction must be taken into account. Following a similar procedure to the previous one the following equation is obtained:\\
+
+		\begin{equation*}-\frac{d^2u\left(\rho\right)}{d\rho^2}+\omega_r^2\rho^2u\left(\rho\right)+\frac{1}{\rho}=\lambda_nu\left(\rho\right)\end{equation*}\\
+
+		Where $\omega_r$ controls the strength of the harmonic potential and stems from the factorization of the constants. The matrix eigenvalue equation for the two electron case is exactly the same one as the previous instance, except for an extra $\frac{h}{i}$ summand in every diagonal element.\\
+
+		Now to solve the problem, two algorithms will be used (see lecture notes, sections 7.4 and 7.5 respectively): Jacobi's method, and Householder's algorithm to compare both computational performances.\\
+
+	\section{Results and discussion}
+
+		First of all, an initial test of the adequate values of $\rho_{max}$ is in order. For $n_{steps}=100$ the following is obtained:\\
+
+		\begin{table}[ht!]\begin{center}\begin{tabular}{|c|c|c|c|}
+			\hline
+			$\rho_{max}$ & $\lambda_0$ & $\lambda_1$ & $\lambda_2$\tabularnewline
+			\hline
+			$1$ & $10.151$ & $39.787$ & $89.089$\tabularnewline
+			\hline
+			$2$ & $3.529$ & $11.166$ & $23.514$\tabularnewline
+			\hline
+			$3$ & $3.012$ & $7.327$ & $12.939$\tabularnewline
+			\hline
+			$4$ & $2.999$ & $7.001$ & $11.072$\tabularnewline
+			\hline
+			$5$ & $2.999$ & $6.996$ & $10.991$\tabularnewline
+			\hline
+			$10$ & $2.997$ & $6.984$ & $10.961$\tabularnewline
+			\hline
+			$20$ & $2.987$ & $6.937$ & $10.845$\tabularnewline
+			\hline
+			$50$ & $2.919$ & $6.583$ & $9.937$\tabularnewline
+			\hline
+		\end{tabular}\par\end{center}\protect\caption{\small Eigenvalues as a function of $rho_{max}$. As it can be seen, the optimum step length is $h=\frac{\rho_{max}}{n_{steps}}=\frac{5}{100}=\frac{1}{20}$. Smaller of bigger values produce less accurate results (because $\rho_{max}$ is too small or because the step length is too big). This optimum value for $h$ is not constant and depends on $n_{steps}$. When comparing, remember that $\lambda_n=3+4n$.\normalsize}\end{table}\vspace{0.75 cm}
+
+		The result with the highest precision for the three first eigenvalues was obtained for $\rho_{max}=5$ and $n_{steps}=300$: $\lambda_0=3.001$, $\lambda_1=7.000$ and $\lambda_2=11.000$. As for the relation between the similarity transformation and the size of the matrix, the following graph illustrates it:\\\newpage
+
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=0.95]{trans.eps}\par\end{center}\protect\caption{\small This is how the amount of transformations scales as a function of $n_{steps}$, a clear polynomial behaviour is apparent.\normalsize}\end{figure}
+		
+		This are the results of the runtime benchmarks:
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=0.95]{time.eps}\par\end{center}\protect\caption{\small And this is how time (in seconds) scales as a function of $n_{steps}$, it is obvious that Householder's algorithm is much faster even though they show very similar scalings.\normalsize}\end{figure} 
+		
+		If there is two electrons, then the following results for the energies are obtained as a function of the oscillator potential strength:\\
+		
+		\begin{table}[ht!]\begin{center}\begin{tabular}{|c|c|c|}
+			\hline
+			$\omega_r$ & $\lambda_0$ & Analytical $\lambda$\tabularnewline
+			\hline
+			$0.01$ & $0.320$ & -\tabularnewline
+			\hline
+			$0.05$ & $0.407$ & $0.35$\tabularnewline
+			\hline
+			$0.25$ & $1.259$ & $1.25$\tabularnewline
+			\hline
+			$0.5$ & $2.232$ & -\tabularnewline
+			\hline
+			$1$ & $4.058$ & -\tabularnewline
+			\hline
+			$5$ & $17.447$ & -\tabularnewline
+			\hline
+		\end{tabular}\par\end{center}\protect\caption{\small Eigenvalues as a function of $\omega_r$. As the strength of the well grows, so does the energy (in this case, in a linear fashion). This is to be expected since the energy will naturally be higher in an environment where the potential energy is higher, especially as the importance of the Coulomb interaction decreases because the harmonic potential gets much stronger with higher values of $\omega_r$. The analytical results for some frequencies come from this article: M. Taut, Phys. Rev. A 48, 3561-3566, (1993), but due to a different scaling of the equation, they are half as big as the ones that appear in this table.\normalsize}\end{table}
+
+		As for the probability distributions:\vspace{1 cm}
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=1]{first_probability.eps}\par\end{center}\protect\caption{\small Probability vs. $\rho$ for the first state with $l=0$.\normalsize}\end{figure}\newpage
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=1]{second_probability.eps}\par\end{center}\protect\caption{\small Probability vs. $\rho$ for the second state with $l=0$.\normalsize}\end{figure}
+		
+		Comparing the probability distributions associated with the presence or absence of the Coulomb interaction in both plots it is clear that when the Coulomb interaction is working there is a shift towards bigger values of $\rho$. This is to be expected since adding a repulsive term to the potential would have this kind of effect, and indeed, for small values of $\omega_r$ where the harmonic interaction is weak compared to the Coulomb one this is more pronounced than in the opposite cases where $\omega_r$ is big and it dominates the Coulomb potential. This shift is more important in small values of $\rho$ because the Coulomb interaction is stronger there, this is especially noticeable for small values of $\omega_r$ in the second state, around $\rho=1$ and $\rho=2$ it's easily visible, but close to$\rho=5$ both probability functions converge because only the harmonic potential is relevant there. Finally, another difference is the change in skewness introduced in the distributions by the Coulomb interaction, generally the shape of the distributions are slightly distorted, not only their modes have different values, but their symmetry is also modified; this is very obvious for the first state and the lowest value of $\omega_r$: without the electrostatic interaction it's almost symmetric in the $\left[0:5\right]$ but when the potential is present it changes its shape everywhere except for the area close to $\rho=5$ where it converges to the previous distribution.\\
+
+\end{document}

@@ -1,0 +1,158 @@
+./1.exe
+ Enter the number of points and the maximum value of rho.
+100
+10
+ The time elpased during runtime was:  0.242769003     and the number of rotations performed was:                 9900
+   2.9968721069174049        6.9843399160679969        10.961741407530978        14.929037654711463        18.886190023194697        22.833158205021011        26.769903070717717        30.696383755298413
+./1.exe
+ Enter the number of points and the maximum value of rho.
+100
+1
+ The time elpased during runtime was:  0.251904994     and the number of rotations performed was:                10281
+   10.150638151356786        39.786661779275256        89.088574011977840        158.03636070590213        246.56484718142536        354.58679224894360        481.99725441634052        628.66940867088158
+./1.exe
+ Enter the number of points and the maximum value of rho.
+100
+2
+ The time elpased during runtime was:  0.253444999     and the number of rotations performed was:                10306
+   3.5294288489309187        11.166077738964480        23.513712510453669        40.755178242988826        62.888746451181127        89.895120808031081        121.74823498501230        158.41660604886425
+./1.exe
+ Enter the number of points and the maximum value of rho.
+100
+3
+ The time elpased during runtime was:  0.255093008     and the number of rotations performed was:                10376
+   3.0119165618222983        7.3266827308526468        12.939155718243729        20.584112389524680        30.402147770656256        42.392548844405447        56.541216716325479        72.832935939439963
+./1.exe
+ Enter the number of points and the maximum value of rho.
+100
+4
+ The time elpased during runtime was:  0.257210016     and the number of rotations performed was:                10372
+   2.9995650664405837        7.0008839571162831        11.072385619478684        15.572396403987408        21.033969907889908        27.702412251854810        35.607117251812085        44.734545266640723
+./1.exe
+ Enter the number of points and the maximum value of rho.
+100
+5
+ The time elpased during runtime was:  0.253565013     and the number of rotations performed was:                10308
+   2.9992309051989579        6.9961056870336131        10.990677690094389        14.988101189997707        19.043560874474259        23.376704765769404        28.309806330472387        34.018582523939330
+./1.exe
+ Enter the number of points and the maximum value of rho.
+200
+5
+ The time elpased during runtime was:   3.51640892     and the number of rotations performed was:                38881
+   3.0001591729751307        6.9990875971584678        10.997997780622796        15.001160293802457        19.065854526056050        23.413939638815524        28.373053463932212        34.122426349690230
+./1.exe
+ Enter the number of points and the maximum value of rho.
+200
+6
+ The time elpased during runtime was:   3.49928284     and the number of rotations performed was:                38663
+   2.9998149116478845        6.9987273608401663        10.996502268479432        14.993755450052550        18.989980100861221        22.987277589638150        27.003801356699125        31.130073336570252
+./1.exe
+ Enter the number of points and the maximum value of rho.
+200
+10
+ The time elpased during runtime was:   3.44814205     and the number of rotations performed was:                38040
+   2.9992384194193717        6.9960947845384105        10.990471478253061        14.982330929449434        18.971703090763373        22.958517227656145        26.942857564110444        30.924668036213991
+./1.exe
+ Enter the number of points and the maximum value of rho.
+300
+10
+ The time elpased during runtime was:   16.1891861     and the number of rotations performed was:                82391
+   2.9997260305254883        6.9983413179018283        10.995814824848683        14.992203542690449        18.987494032745278        22.981664389822992        26.974789806970691        30.966568545593127
+./1.exe
+ Enter the number of points and the maximum value of rho.
+300
+5
+ The time elpased during runtime was:   16.6125050     and the number of rotations performed was:                83903
+   3.0013709813535825        7.0004721298927590        11.000690419528025        15.003574121192509        19.068695518716787        23.421303066601848        28.385102934947152        34.142290690235086
+./1.exe
+ Enter the number of points and the maximum value of rho.
+300
+5
+ The time elpased during runtime was:   16.4808083     and the number of rotations performed was:                83903
+   3.0013709813535825        7.0004721298927590        11.000690419528025        15.003574121192509        19.068695518716787        23.421303066601848        28.385102934947152        34.142290690235086
+./1.exe
+ Enter the number of points and the maximum value of rho.
+400
+5
+ The time elpased during runtime was:   51.1160660     and the number of rotations performed was:               143355
+   3.0038261254945939        7.0040575611960270        10.995339697717528        15.006283428700135        19.072029024332643        23.426807254517520        28.389964897423052        34.147555882784374
+./1.exe
+ Enter the number of points and the maximum value of rho.
+400
+10
+ The time elpased during runtime was:   51.3692741     and the number of rotations performed was:               141672
+   3.0001338913496496        6.9991952271167062        10.997877843734138        14.995715395868272        18.993198587657087        22.990513612578219        26.985368362781344        30.981335894037436
+./1.exe
+ Enter the number of points and the maximum value of rho.
+500
+5
+ The time elpased during runtime was:   142.834366     and the number of rotations performed was:               218073
+   3.0068912714803453        7.0326997598743475        10.984518614663559        15.027651290489503        19.066273012536147        23.415292769935572        28.395930073719672        34.146486900018196
+./1.exe
+ Enter the number of points and the maximum value of rho.
+500
+10
+ The time elpased during runtime was:   139.683136     and the number of rotations performed was:               216284
+   3.0008064871271030        7.0010913804197710        10.998063709905926        14.998415043786149        18.995652921671557        22.994323468864678        26.990467376096873        30.988451968702343
+./1.exe
+ Enter the number of points and the maximum value of rho.
+600
+5
+ The time elpased during runtime was:   275.033966     and the number of rotations performed was:               308391
+   3.0352629911248075        6.9847465006095000        11.039202008147292        15.022353278486325        19.085492117711205        23.403794830935450        28.406397740414285        34.148368158720139
+./1.exe
+ Enter the number of points and the maximum value of rho.
+600
+10
+ The time elpased during runtime was:   246.027756     and the number of rotations performed was:               306926
+   3.0034629081931588        6.9993060112450625        10.999857739529766        14.999811713706400        18.997349475787860        22.997211199847808        26.993894534821411        30.990617747033809
+./1.exe
+ Enter the number of points and the maximum value of rho.
+600
+20
+ The time elpased during runtime was:   236.414658     and the number of rotations performed was:               298228
+   2.9997317958848675        6.9983610347007055        10.995880858109508        14.992305983201206        18.987487598141342        22.981659344936194        26.974790370042477        30.966571000806940
+./1.exe
+ Enter the number of points and the maximum value of rho.
+700
+10
+ The time elpased during runtime was:   460.979095     and the number of rotations performed was:               409140
+   3.0020899287771048        7.0013063543138463        11.002471291358438        14.998913438166069        19.003372984018135        23.001875204469133        26.991220836826816        30.996240679710649
+./1.exe
+ Enter the number of points and the maximum value of rho.
+700
+20
+ The time elpased during runtime was:   464.670685     and the number of rotations performed was:               399790
+   2.9998830715918623        6.9988624614009556        10.997136292561352        14.994319392502005        18.990934480424897        22.986801425098609        26.981467552705791        30.975619847651316
+
+
+
+
+./2.exe
+ Enter the width of the well, the number of points and the maximum value of rho.
+1
+100
+5
+ The time elpased during runtime was:  0.248990998     and the number of rotations performed was:                10225
+   4.0570624563184996        7.9059320754847215        11.810361810625309        15.747175807738870        19.772438257106032        24.118111570849646        29.090840549614562        34.841444602303916
+./2.exe
+ Enter the width of the well, the number of points and the maximum value of rho.
+1
+200
+5
+ The time elpased during runtime was:   3.50183606     and the number of rotations performed was:                38742
+   4.0577960691229835        7.9088023275363728        11.817330907356792        15.760065359806704        19.794381372502535        24.155393634419148        29.154326351661062        34.946303659646333
+./2.exe
+ Enter the width of the well, the number of points and the maximum value of rho.
+1
+100
+10
+ The time elpased during runtime was:  0.246702000     and the number of rotations performed was:                 9881
+   4.0545979224229853        7.8946374386511833        11.782370383674547        15.687226868556470        19.597406968482900        23.507235583648740        27.413575303424238        31.314521269795492
+./2.exe
+ Enter the width of the well, the number of points and the maximum value of rho.
+1
+200
+10
+ The time elpased during runtime was:   3.41871595     and the number of rotations performed was:                37821
+   4.0570829098300472        7.9059130498943864        11.810031172814488        15.738858423802231        19.680659333767942        23.629788845566072        27.583166692315309        31.538899497247783

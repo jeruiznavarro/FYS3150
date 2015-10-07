@@ -1,0 +1,14 @@
+1/
+programs/
+Project3_old/
+*.pdf
+*.eps
+*.dvi
+*.log
+*.aux
+*.toc
+*.gz
+*.zip
+*.exe
+*.mod
+*.o

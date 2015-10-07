@@ -1,0 +1,73 @@
+\documentclass[11pt,a4paper,oneside]{article}\usepackage{longtable}\usepackage{lscape}\usepackage{graphicx}\usepackage{amsfonts}\usepackage{amsmath}\usepackage{amsthm}\usepackage{amssymb}\usepackage{calc}\usepackage[cp1252]{inputenc}\usepackage[left=1.0in,right=1.5in,top=1.0in,bottom=1.0in,includeheadfoot]{geometry}\usepackage{fancyhdr}\pagestyle{fancy}\fancyhead[LO]{\nouppercase{\leftmark}}\fancyhead[R]{\nouppercase{\rightmark}}\fancyhead[RO]{\thepage}\fancyfoot[LO]{\today}\fancyfoot[C]{}\fancyfoot[R]{FYS4150}\sloppy\renewcommand{\footrulewidth}{0.5pt}\setlength{\headheight}{16.0pt}\title{\textbf{\textbf{\Huge Project 1}}}\author{Jose Emilio Ruiz Navarro}\begin{document}\maketitle\newpage
+
+The three source codes are located here: https://github.com/jeruiznavarro/FYS3150 as fortran source files.\\
+
+In this project a simple and common, linear, second order differential equation (one-dimensional Poisson equation with Dirichlet boundary conditions) will be numerically solved with two different methods that involve converting the problem into a linear algebra one, a system of linear equations that happens to be tridiagonal. This conversion is done thanks to the discretization and the approximation of the second derivative. This system of linear equations will be solved with two methods: forward-backwards substitution and LU decomposition.\\
+
+The differential equation is:\\
+
+\begin{equation}-\frac{d^2u\left(x\right)}{dx^2}=f\left(x\right)=100\exp{\left(-10x\right)},\hspace{1 cm}x\in\left(0,1\right),\hspace{1 cm}u\left(0\right)=u\left(1\right)=0\end{equation}\\
+
+Discretization and approximation of the second derivative yields:\\
+
+\begin{equation}-\frac{v_{i+1}+v_{i-1}-2v_i}{h^2}=f_i=100\exp{\left(-10\frac{i}{n+1}\right)}\hspace{1 cm}\text{for}\hspace{0.25 cm}i=1,\dots,n\end{equation}\\
+
+Considering that there are $n$ equations like the previous one, and that there are $n$ values for $v_i$ ($v_{0}$ and $v_{n+1}$ don't make sense, so they can be disregarded), it's easy to see why a matrix would describe this system of linear equations. In particular, for each row of the matrix there are only three non zero coefficients: the one in the spot of the main diagonal and those adjacent to it, with values of $2$ and $-1$ respectively. In the case of the first and last rows, there are only two non zero numbers: $2$ in the corners and $-1$ to their right and left respectively. LU decomposition can be applied to this matrix to solve the problem wihout having to deal with forward and backward substitution in the system of equations.\\
+
+\small\begin{equation*}\left(\begin{array}{ccccccc}
+2 & -1 & 0 & \dots & \dots & \dots & 0\\
+-1 & 2 & -1 & 0 & \dots & \dots & 0\\
+0 & -1 & 2 & -1 & 0 & \dots & 0\\
+0 & \ddots & \ddots & \ddots & \ddots & \ddots & 0\\
+0 & \dots & 0 & -1 & 2 & -1 & 0\\
+0 & \dots & \dots &  0 & -1 & 2 & -1\\
+0 & \dots & \dots & \dots & 0 &-1 & 2\\
+\end{array}\right)\end{equation*}\\\normalsize
+
+The closed solution to the differential equation is:\\
+
+\begin{equation}u\left(x\right)=1-\left(1-\exp{\left(-10\right)}\right)x-\exp{\left(-10x\right)}\end{equation}\\
+
+It obviously agrees with the boundary conditions and applying the derivative two times gives the source term with a minus sign, so it actually is the analytical solution that should be used in the comparision with the numerical ones.\\
+
+To perform the substitution method, the algorithm provided in Numerical Recipes by Teukolsky \& al (in page 51) is used, and it yields the following results:\\
+
+\begin{figure}[ht!]\begin{centering}\includegraphics[scale=1]{10reg.eps}\par\end{centering}\protect\caption{\scriptsize Comparision between the numerical and analytical solutions for $n=10$.\normalsize}\end{figure}
+
+\begin{figure}[ht!]\begin{centering}\includegraphics[scale=1]{100reg.eps}\par\end{centering}\protect\caption{\scriptsize Comparision between the numerical and analytical solutions for $n=100$.\normalsize}\end{figure}\newpage
+
+\begin{figure}[ht!]\begin{centering}\includegraphics[scale=1]{1000reg.eps}\par\end{centering}\protect\caption{\scriptsize Comparision between the numerical and analytical solutions for $n=1000$.\normalsize}\end{figure}
+
+As it can be seen the numerical solution gets better as $n$ grows, and for just $n=100$ the result is really good. If we compare with the LU decomposition:\\\newpage
+
+\begin{figure}[ht!]\begin{centering}\includegraphics[scale=1]{10lu.eps}\par\end{centering}\protect\caption{\scriptsize Comparision between the subsitution and the LU decomposition methods for $n=10$.\normalsize}\end{figure}
+
+\begin{figure}[ht!]\begin{centering}\includegraphics[scale=1]{100lu.eps}\par\end{centering}\protect\caption{\scriptsize Comparision between the subsitution and the LU decomposition methods for $n=100$.\normalsize}\end{figure}\newpage
+
+\begin{figure}[ht!]\begin{centering}\includegraphics[scale=1]{1000lu.eps}\par\end{centering}\protect\caption{\scriptsize Comparision between the subsitution and the LU decomposition methods for $n=1000$.\normalsize}\end{figure}
+
+The match is perfect in every case, both methods produce equally good results.\\
+
+In table 1 the maximum values of $\epsilon$ for each run are recorded, together with the runtimes and the number of floating point operations in the case of the substitution method (which is related to $n$ being six times bigger). The agreement between the maximum values in both methods is really good (only 3 decimals are shown here so the table could fit in the page, but the difference is usually in the order of a few parts per billion). The maximum relative error becomes smaller as $n$ grows, something that was expected since smaller errors are associated with smaller discretizations. The problem is, LU decomposition is much slower, while having a small advantage for small values of $n$, it quickly dissapears. As $n$ grows so does the time it takes for the algorithm to find a solution, for $n=1000$ the difference is almost three orders of magnitude, and for $n=10000$ the difference is almost five, this is because substitution scales as $O\left(n\right)$ whereas LU grows as $O\left(n^3\right)$, so despite the quality of the results being almost equal, the consumption of computational resources is much higher in the case of LU decomposition. Not only in computational time, but in memory as well, for $n=10^5$ the computer that was used would run out of memory to store the matrix.\newpage
+
+\tiny\begin{table}\begin{centering}\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$n$ & $10$ & $100$ & $1000$ & $10000$ & $100000$\tabularnewline
+\hline
+$h$ & $9.09\times10^{-2}$ & $9.90\times10^{-3}$ & $9.99\times10^{-4}$ & $9.99\times10^{-5}$ & $9.99\times10^{-6}$\tabularnewline
+\hline
+Subst. & $2.305\times10^{-3}$ & $3.948\times10^{-3}$ & $9.348\times10^{-3}$ & $5.033\times10^{-2}$ & $4.900\times10^{-1}$\tabularnewline
+\hline
+Max $\epsilon$ & $-1.180$ & $-3.088$ & $-5.080$ & $-7.079$ & $-8.843$\tabularnewline
+\hline
+\# of floats & $55$ & $595$ & $5995$ & $59995$ & $599995$\tabularnewline
+\hline
+Decomp. & $1.337\times10^{-3}$ & $3.164\times10^{-3}$ & $1.868\times10^{0}$ & $2.517\times10^3$ & $-$\tabularnewline
+\hline
+Max $\epsilon$ & $-1.179$ & $-3.088$ & $-5.080$ & $-7.079$ & $-$\tabularnewline
+\hline
+\end{tabular}\par\end{centering}\protect\caption{\scriptsize Runtimes (in seconds) and maximum relative errors for both methods and for different values of $n$. Note that for the biggest value of $n$ and the LU decomposition method there is no data, the runtime was just too long.\normalsize}\end{table}
+
+\normalsize If the errors in the previous table are represented graphically the following plot is obtained:\\
+
+\begin{figure}[ht!]\begin{centering}\includegraphics[scale=1]{error.eps}\par\end{centering}\protect\caption{\scriptsize Scaling of the relative error, as it can be seen, in a logarithmic space it's a perfect straight line according to what was expected.\normalsize}\end{figure}\end{document}

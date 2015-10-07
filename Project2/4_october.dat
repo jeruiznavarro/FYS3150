@@ -1,0 +1,135 @@
+./1.exe
+ Enter the number of points and the maximum value of rho.
+100
+20
+ The time elpased during runtime was:  0.168153003     and the number of rotations performed was:                 6632
+   2.9874431237773780        6.9369174822521789        10.845289438794444        14.711884176543288        18.535988578356363        22.316847742410115        26.053660927008860        29.745576489239738
+./1.exe
+ Enter the number of points and the maximum value of rho.
+100
+50
+ The time elpased during runtime was:   2.80440003E-02 and the number of rotations performed was:                  898
+   2.9194841393257676        6.5830341920631499        9.9365543506634744        12.916436370538889        15.472202031922089        17.951320297034904        20.931665686730007        24.512716228358059
+./1.exe
+ Enter the number of points and the maximum value of rho.
+300
+15
+ The time elpased during runtime was:   16.0504951     and the number of rotations performed was:                80890
+   2.9992561540797711        6.9961176867615951        10.990469050559870        14.982337917409280        18.971659661029477        22.958527184140983        26.942868857850787        30.924692791547631
+./1.exe
+ Enter the number of points and the maximum value of rho.
+300
+5
+ The time elpased during runtime was:   16.6724186     and the number of rotations performed was:                83903
+   3.0013709813535825        7.0004721298927590        11.000690419528025        15.003574121192509        19.068695518716787        23.421303066601848        28.385102934947152        34.142290690235086
+./1.exe
+ Enter the number of points and the maximum value of rho.
+300
+5
+ The time elpased during runtime was:   16.6394691     and the number of rotations performed was:                83903
+   3.0013709813535825        7.0004721298927590        11.000690419528025        15.003574121192509        19.068695518716787        23.421303066601848        28.385102934947152        34.142290690235086
+./1.exe
+ Enter the number of points and the maximum value of rho.
+300
+6
+ The time elpased during runtime was:   16.5205135     and the number of rotations performed was:                83343
+   3.0009173238635842        6.9991865179114674        10.998683978181701        14.997211481507213        18.995690185180226        22.995886697362543        27.016377939027763        31.146677743532678
+./1.exe
+ Enter the number of points and the maximum value of rho.
+300
+7
+ The time elpased during runtime was:   16.6144447     and the number of rotations performed was:                83441
+   2.9999656040304932        6.9993553250484490        10.998419129175085        14.996249290359692        18.994189046284998        22.991213491846487        26.987789070424704        30.983638302876439
+./1.exe
+ Enter the number of points and the maximum value of rho.
+400
+7
+ The time elpased during runtime was:   51.3792725     and the number of rotations performed was:               142787
+   3.0010615750948699        7.0013311093250730        10.999910217506418        14.997118610267723        18.997640264914896        22.996228792962068        26.991773287447813        30.991633935742517
+./1.exe
+ Enter the number of points and the maximum value of rho.
+400
+8
+ The time elpased during runtime was:   52.0287132     and the number of rotations performed was:               142740
+   3.0005448177338740        7.0002199508780478        10.998176451921410        14.998139168305833        18.996030584475051        22.993713682673590        26.991244441325101        30.988975307867786
+./1.exe
+ Enter the number of points and the maximum value of rho.
+400
+9
+ The time elpased during runtime was:   52.4243011     and the number of rotations performed was:               142514
+   3.0006742257428929        6.9992078759785548        10.998219421808523        14.996934958682090        18.994761758758386        22.991768369182022        26.988495724889333        30.985171345241831
+./1.exe
+ Enter the number of points and the maximum value of rho.
+600
+25
+ The time elpased during runtime was:   234.607437     and the number of rotations performed was:               292698
+   2.9995015895959534        6.9973587754069975        10.993399287835700        14.987744754347418        18.980388967649805        22.971234605499774        26.960381461742102        30.947807909213868
+./1.exe
+ Enter the number of points and the maximum value of rho.
+600
+15
+ The time elpased during runtime was:   244.022202     and the number of rotations performed was:               303619
+   3.0002685107383784        7.0000351046804941        10.997320311171167        14.995728270127145        18.993085847364569        22.989755848054699        26.986235544304943        30.981419418463389
+./2.exe
+ Enter the width of the well, the number of points, the maximum value of rho and whether you want coulomb interaction ornot (1 and 0 respectively).
+0.5
+300
+5
+1
+ The time elpased during runtime was:   16.6309414     and the number of rotations performed was:                83764
+   2.2319518884522571
+emilio@emilio-OptiPlex-760:~/Documents/Master courses/FYS4150/Project2$ ./2.exe
+ Enter the width of the well, the number of points, the maximum value of rho and whether you want coulomb interaction ornot (1 and 0 respectively).
+0.5
+300
+5
+0
+ The time elpased during runtime was:   16.7945633     and the number of rotations performed was:                83769
+   1.5019041112446327
+emilio@emilio-OptiPlex-760:~/Documents/Master courses/FYS4150/Project2$ ./2.exe
+ Enter the width of the well, the number of points, the maximum value of rho and whether you want coulomb interaction ornot (1 and 0 respectively).
+1
+300
+5
+0
+ The time elpased during runtime was:   16.7546749     and the number of rotations performed was:                83903
+   3.0013709813535825
+emilio@emilio-OptiPlex-760:~/Documents/Master courses/FYS4150/Project2$ ./1.exe
+ Enter the number of points and the maximum value of rho.
+300
+5
+ The time elpased during runtime was:   16.6557236     and the number of rotations performed was:                83903
+   3.0013709813535825        7.0004721298927590        11.000690419528025        15.003574121192509        19.068695518716787        23.421303066601848        28.385102934947152        34.142290690235086
+
+./2.exe    
+ Enter the width of the well, the number of points, the maximum value of rho and whether you want coulomb interaction ornot (1 and 0 respectively).
+0.01
+300
+5
+1
+ The time elpased during runtime was:   16.7136307     and the number of rotations performed was:                84166
+  0.84255877306339522
+emilio@emilio-OptiPlex-760:~/Documents/Master courses/FYS4150/Project2$ ./2.exe
+ Enter the width of the well, the number of points, the maximum value of rho and whether you want coulomb interaction ornot (1 and 0 respectively).
+0.5
+300
+5
+1
+ The time elpased during runtime was:   16.6505051     and the number of rotations performed was:                83764
+   2.2319518884522571
+emilio@emilio-OptiPlex-760:~/Documents/Master courses/FYS4150/Project2$ ./2.exe
+ Enter the width of the well, the number of points, the maximum value of rho and whether you want coulomb interaction ornot (1 and 0 respectively).
+5
+300
+5
+1
+ The time elpased during runtime was:   16.2802238     and the number of rotations performed was:                81916
+   17.446615271489105
+emilio@emilio-OptiPlex-760:~/Documents/Master courses/FYS4150/Project2$ ./2.exe
+ Enter the width of the well, the number of points, the maximum value of rho and whether you want coulomb interaction ornot (1 and 0 respectively).
+1
+300
+5
+1
+ The time elpased during runtime was:   16.6448917     and the number of rotations performed was:                83936
+   4.0580984593041087
