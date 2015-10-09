@@ -48,8 +48,8 @@ do
 			mik=matrix(i,k) ; mil=matrix(i,l)
 			matrix(i,k)=c*mik-s*mil ; matrix(k,i)=matrix(i,k) ; matrix(i,l)=s*mik+c*mil ; matrix(l,i)=matrix(i,l)!performing the rotation 				in the appropiate rows and columns
 		end if
-	eik=evecs(k,i) ; eil=evecs(l,i)
-	evecs(k,i)=c*eik-s*eil ; evecs(l,i)=c*eil+s*eik!the eigenvectors need to be rotated as well
+		eik=evecs(k,i) ; eil=evecs(l,i)
+		evecs(k,i)=c*eik-s*eil ; evecs(l,i)=c*eil+s*eik!the eigenvectors need to be rotated as well
 	end do
 	m=m+1
 end do
