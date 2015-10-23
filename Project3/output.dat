@@ -1,0 +1,439 @@
+ Run from 20151021 at 182701.024 with                    5  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.35460216492989605       which is   183.95500069290264      % of the closed form value.
+ The value for the laguerre integral is:   2.9975788010751594E-002  which is   15.550373487929084      % of the closed form value.
+ The value for the mc integral is:   4.6900065848273477E-005  which is   2.4330087345411335E-002 % of the closed form value, and with a standard deviation of   2.1822335402395844E-010
+ The value for the mc integral with importance sampling is:   2.8311386994745149       which is   1468.6941393222996      % of the closed form value, and with a standard deviation of   1.4572856038977749E-006
+
+
+ Run from 20151021 at 182712.416 with                   10  zeros,              1000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.12983424786083370       which is   67.353393513330332      % of the closed form value.
+ The value for the laguerre integral is:  0.18645734336682412       which is   96.727443091109976      % of the closed form value.
+ The value for the mc integral is:   4.5265516099428508E-005  which is   2.3482141027202013E-002 % of the closed form value, and with a standard deviation of   1.5839287581013922E-009
+ The value for the mc integral with importance sampling is:   2.8333447852581446       which is   1469.8385782231069      % of the closed form value, and with a standard deviation of   1.5593926032287772E-005
+
+
+ Run from 20151021 at 182718.736 with                   15  zeros,              1000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.19947477699708382       which is   103.48042502213583      % of the closed form value.
+ The value for the laguerre integral is:  0.18975897999430152       which is   98.440214834100857      % of the closed form value.
+ The value for the mc integral is:   4.7705526071231145E-005  which is   2.4747931483225821E-002 % of the closed form value, and with a standard deviation of   2.5278551281228728E-009
+ The value for the mc integral with importance sampling is:   2.8121005370429026       which is   1458.8178172643359      % of the closed form value, and with a standard deviation of   1.4181418722458438E-005
+
+
+ Run from 20151021 at 182728.320 with                   20  zeros,              1000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.17706518178265310       which is   91.855123456328272      % of the closed form value.
+ The value for the laguerre integral is:  0.19108177836842871       which is   99.126435618672900      % of the closed form value.
+ The value for the mc integral is:   4.6666445105342758E-005  which is   2.4208893206801963E-002 % of the closed form value, and with a standard deviation of   2.5328065052668329E-009
+ The value for the mc integral with importance sampling is:   2.8247805904546381       which is   1465.3957783284004      % of the closed form value, and with a standard deviation of   1.3978295782562558E-005
+
+
+ Run from 20151021 at 182759.536 with                   25  zeros,              1000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.18910953004332778       which is   98.103303280825386      % of the closed form value.
+ The value for the laguerre integral is:  0.19174073880012252       which is   99.468280871345840      % of the closed form value.
+ The value for the mc integral is:   4.5699798522254827E-005  which is   2.3707431313875035E-002 % of the closed form value, and with a standard deviation of   2.0014824343049063E-009
+ The value for the mc integral with importance sampling is:   2.8368205460846285       which is   1471.6416794122117      % of the closed form value, and with a standard deviation of   1.3623828122480395E-005
+
+
+ Run from 20151021 at 182935.152 with                   30  zeros,              1000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.18579562359333507       which is   96.384166389979995      % of the closed form value.
+ The value for the laguerre integral is:  0.19211371044374781       which is   99.661765304739205      % of the closed form value.
+ The value for the mc integral is:   4.8796178383605899E-005  which is   2.5313723141373985E-002 % of the closed form value, and with a standard deviation of   2.5943360463997062E-009
+ The value for the mc integral with importance sampling is:   2.8151435969042682       which is   1460.3964485708220      % of the closed form value, and with a standard deviation of   1.2737045724861499E-005
+
+
+ Run from 20151021 at 183852.320 with                    5  zeros,             10000000  mc cycles and   1.0000000000000001E-005 proximity threshold.
+ The value for the legendre integral is:  0.35460216492989605       which is   183.95500069290264      % of the closed form value.
+ The value for the laguerre integral is:   2.9975788010751594E-002  which is   15.550373487929084      % of the closed form value.
+ The value for the mc integral is:   4.6750440045830400E-005  which is   2.4252466796767663E-002 % of the closed form value, and with a standard deviation of   2.5709236724506184E-010
+ The value for the mc integral with importance sampling is:   2.8330597788103664       which is   1469.6907270070578      % of the closed form value, and with a standard deviation of   1.8561324619142986E-006
+
+
+ Run from 20151021 at 183908.592 with                   10  zeros,             10000000  mc cycles and   1.0000000000000001E-005 proximity threshold.
+ The value for the legendre integral is:  0.12983424786083370       which is   67.353393513330332      % of the closed form value.
+ The value for the laguerre integral is:  0.18645734336682412       which is   96.727443091109976      % of the closed form value.
+ The value for the mc integral is:   4.6592271230742168E-005  which is   2.4170414436780228E-002 % of the closed form value, and with a standard deviation of   2.8643828496160781E-010
+ The value for the mc integral with importance sampling is:   2.8358718638706111       which is   1471.1495367955092      % of the closed form value, and with a standard deviation of   1.6153589524414943E-006
+
+
+ Run from 20151021 at 183924.096 with                   15  zeros,             10000000  mc cycles and   1.0000000000000001E-005 proximity threshold.
+ The value for the legendre integral is:  0.19947477699708382       which is   103.48042502213583      % of the closed form value.
+ The value for the laguerre integral is:  0.18975897999430152       which is   98.440214834100857      % of the closed form value.
+ The value for the mc integral is:   4.6117821447340032E-005  which is   2.3924286750978473E-002 % of the closed form value, and with a standard deviation of   1.9961201900362233E-010
+ The value for the mc integral with importance sampling is:   2.8312301170301337       which is   1468.7415635011976      % of the closed form value, and with a standard deviation of   1.4761811466489655E-006
+
+
+ Run from 20151021 at 183944.304 with                   20  zeros,             10000000  mc cycles and   1.0000000000000001E-005 proximity threshold.
+ The value for the legendre integral is:  0.17706518178265310       which is   91.855123456328272      % of the closed form value.
+ The value for the laguerre integral is:  0.19108177836842871       which is   99.126435618672900      % of the closed form value.
+ The value for the mc integral is:   4.6697575462718544E-005  which is   2.4225042529843362E-002 % of the closed form value, and with a standard deviation of   2.1866391929984614E-010
+ The value for the mc integral with importance sampling is:   2.8345200477133341       which is   1470.4482626163240      % of the closed form value, and with a standard deviation of   1.6490852685163900E-006
+
+
+ Run from 20151021 at 184017.920 with                   25  zeros,             10000000  mc cycles and   1.0000000000000001E-005 proximity threshold.
+ The value for the legendre integral is:  0.18910953004332778       which is   98.103303280825386      % of the closed form value.
+ The value for the laguerre integral is:  0.19174073880012252       which is   99.468280871345840      % of the closed form value.
+ The value for the mc integral is:   4.7701431033873493E-005  which is   2.4745807123381282E-002 % of the closed form value, and with a standard deviation of   2.5528180758146034E-010
+ The value for the mc integral with importance sampling is:   2.8335052779530541       which is   1469.9218361293554      % of the closed form value, and with a standard deviation of   1.4719404489483900E-006
+
+
+ Run from 20151021 at 184159.584 with                   30  zeros,             10000000  mc cycles and   1.0000000000000001E-005 proximity threshold.
+ The value for the legendre integral is:  0.18579562359333507       which is   96.384166389979995      % of the closed form value.
+ The value for the laguerre integral is:  0.19211371044379177       which is   99.661765304762014      % of the closed form value.
+ The value for the mc integral is:   4.7388878233170717E-005  which is   2.4583665838425466E-002 % of the closed form value, and with a standard deviation of   2.3695956268866800E-010
+ The value for the mc integral with importance sampling is:   2.8444674340561678       which is   1475.6086131233499      % of the closed form value, and with a standard deviation of   1.9765154801673990E-006
+
+
+ Run from 20151022 at 154158.780 with                   10  zeros,                10000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.12983424786083370       which is   67.353393513330332       % of the closed form value. The time spent during integration was   6.4859000000000000E-002
+ The value for the laguerre integral is:                       NaN  which is                       NaN  % of the closed form value. The time spent during integration was  0.11804800000000000
+ The value for the mc integral is:  0.20370517516533890       which is   2.5799561827277360E-002  % of the closed form value, and with a standard deviation of   1.8960029583941610E-007  . The time spent during integration was   1.1339999999999961E-003
+ The value for the mc integral with importance sampling is:   2.7172734093333277       which is   1409.6248735411373      % of the closed form value, and with a standard deviation of   9.2185740180742663E-004  . The time spent during integration was   4.9980000000000024E-003
+
+
+ Run from 20151022 at 154321.964 with                   20  zeros,                10000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.17706518178265310       which is   91.855123456328272       % of the closed form value. The time spent during integration was   3.9489879999999999
+ The value for the laguerre integral is:  0.19108177836842877       which is   99.126435618672929       % of the closed form value. The time spent during integration was   7.5411539999999997
+ The value for the mc integral is:  0.12150523841817706       which is   63.032599425403667       % of the closed form value, and with a standard deviation of   4.2456301457088002E-008  . The time spent during integration was   1.8089999999997275E-003
+ The value for the mc integral with importance sampling is:   2.8116272777127094       which is   1458.5723071433506      % of the closed form value, and with a standard deviation of   1.0601709447727030E-003  . The time spent during integration was   5.5910000000007898E-003
+
+
+ Run from 20151022 at 154409.292 with                   15  zeros,              1000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.19947477699708382       which is   103.48042502213583       % of the closed form value. The time spent during integration was  0.70657700000000001
+ The value for the laguerre integral is:  0.18975897999430155       which is   98.440214834100871       % of the closed form value. The time spent during integration was   1.7346860000000000
+ The value for the mc integral is:  0.20338884678778446       which is   105.51090532448467       % of the closed form value, and with a standard deviation of   2.6430311418922681E-009  . The time spent during integration was  0.11225299999999994
+ The value for the mc integral with importance sampling is:   2.8206081349420096       which is   1463.2312566964797      % of the closed form value, and with a standard deviation of   1.3999485792204036E-005  . The time spent during integration was  0.50525900000000012
+
+
+ Run from 20151022 at 154607.740 with                   15  zeros,              1000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.19947477699708382       which is   103.48042502213583       % of the closed form value. The time spent during integration was  0.70857999999999999
+ The value for the laguerre integral is:  0.18975897999430155       which is   98.440214834100871       % of the closed form value. The time spent during integration was   1.7326609999999998
+ The value for the mc integral is:  0.21113272726239057       which is   109.52815529912469       % of the closed form value, and with a standard deviation of   3.8216965504321567E-009  . The time spent during integration was  0.11143699999999956
+ The value for the mc integral with importance sampling is:   3165.9764459139010       which is   1642396.0621248421      % of the closed form value, and with a standard deviation of   1.4796287606927539E-005  . The time spent during integration was  0.49659000000000031
+
+
+ Run from 20151022 at 161010.621 with                   15  zeros,              1000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.19947477699708382       which is   103.48042502213583       % of the closed form value. The time spent during integration was  0.71223999999999998
+ The value for the laguerre integral is:  0.18975897999430155       which is   98.440214834100871       % of the closed form value. The time spent during integration was   1.7402790000000001
+ The value for the mc integral is:  0.19483114589917236       which is   101.07147424203339       % of the closed form value, and with a standard deviation of   2.6151938655660046E-009  . The time spent during integration was  0.11222799999999999
+ The value for the mc integral with importance sampling is:   88.168823795998208       which is   45738.852287299858      % of the closed form value, and with a standard deviation of   1.3841129214462660E-005  . The time spent during integration was  0.49634100000000014
+
+
+ Run from 20151022 at 161057.101 with                   15  zeros,              1000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.19947477699708382       which is   103.48042502213583       % of the closed form value. The time spent during integration was  0.70845599999999997
+ The value for the laguerre integral is:  0.18975897999430155       which is   98.440214834100871       % of the closed form value. The time spent during integration was   1.7363249999999999
+ The value for the mc integral is:  0.19515911985170026       which is   101.24161547249219       % of the closed form value, and with a standard deviation of   2.1416656196861131E-009  . The time spent during integration was  0.11155699999999991
+ The value for the mc integral with importance sampling is:   8.7876540714833826       which is   4558.7226212459782      % of the closed form value, and with a standard deviation of   3.7045916218697238E-006  . The time spent during integration was  0.49445300000000003
+
+
+ Run from 20151022 at 161211.517 with                   15  zeros,              1000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.19947477699708382       which is   103.48042502213583       % of the closed form value. The time spent during integration was  0.71906300000000001
+ The value for the laguerre integral is:  0.18975897999430155       which is   98.440214834100871       % of the closed form value. The time spent during integration was   1.7339140000000002
+ The value for the mc integral is:  0.20347227255271280       which is   105.55418364639856       % of the closed form value, and with a standard deviation of   2.7466845517791167E-009  . The time spent during integration was  0.11117599999999994
+ The value for the mc integral with importance sampling is:   319.85088747251456       which is   165927.27299976890      % of the closed form value, and with a standard deviation of   4.5077154696053780E-006  . The time spent during integration was  0.49560000000000004
+
+
+ Run from 20151022 at 161255.709 with                   15  zeros,              1000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.19947477699708382       which is   103.48042502213583       % of the closed form value. The time spent during integration was  0.70660900000000004
+ The value for the laguerre integral is:  0.18975897999430155       which is   98.440214834100871       % of the closed form value. The time spent during integration was   1.7338320000000000
+ The value for the mc integral is:  0.17602787619977708       which is   91.317006185514558       % of the closed form value, and with a standard deviation of   1.4692970814039762E-009  . The time spent during integration was  0.12871900000000025
+ The value for the mc integral with importance sampling is:   8.6904662813969615       which is   4508.3050497790246      % of the closed form value, and with a standard deviation of   2.9211063767010084E-006  . The time spent during integration was  0.50681300000000018
+
+
+ Run from 20151022 at 161329.596 with                   15  zeros,              1000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.19947477699708382       which is   103.48042502213583       % of the closed form value. The time spent during integration was  0.70645899999999995
+ The value for the laguerre integral is:  0.18975897999430155       which is   98.440214834100871       % of the closed form value. The time spent during integration was   1.7338210000000001
+ The value for the mc integral is:  0.18811500086421490       which is   97.587376888021240       % of the closed form value, and with a standard deviation of   1.7926565211032789E-009  . The time spent during integration was  0.11161799999999999
+ The value for the mc integral with importance sampling is:  0.28646752279714305       which is   148.60916984266197      % of the closed form value, and with a standard deviation of   3.4340268822643098E-006  . The time spent during integration was  0.49406499999999998
+
+
+ Run from 20151022 at 162552.701 with                   10  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.12983424786083370       which is   67.353393513330332       % of the closed form value. The time spent during integration was   6.7040999999999989E-002
+ The value for the laguerre integral is:                       NaN  which is                       NaN  % of the closed form value. The time spent during integration was  0.11720499999999999
+ The value for the mc integral is:  0.18952567782435026       which is   98.319185959831231       % of the closed form value, and with a standard deviation of   2.3462491184345173E-010  . The time spent during integration was   1.1099999999999999
+ The value for the mc integral with importance sampling is:  0.28477696247881557       which is   147.73216723160681      % of the closed form value, and with a standard deviation of   3.6418081563759290E-007  . The time spent during integration was   4.9516359999999997
+
+
+ Run from 20151022 at 162618.557 with                    5  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.35460216492989605       which is   183.95500069290264       % of the closed form value. The time spent during integration was   1.4470000000000004E-003
+ The value for the laguerre integral is:                       NaN  which is                       NaN  % of the closed form value. The time spent during integration was   4.7959999999999999E-003
+ The value for the mc integral is:  0.19713740516291114       which is   102.26787958418056       % of the closed form value, and with a standard deviation of   3.0349110511769954E-010  . The time spent during integration was   1.1114199999999999
+ The value for the mc integral with importance sampling is:  0.28295689182902706       which is   146.78797926335466      % of the closed form value, and with a standard deviation of   3.7360845266757024E-007  . The time spent during integration was   5.0083549999999999
+
+
+ Run from 20151022 at 162629.325 with                   15  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.19947477699708382       which is   103.48042502213583       % of the closed form value. The time spent during integration was  0.71059299999999992
+ The value for the laguerre integral is:  0.18975897999430155       which is   98.440214834100871       % of the closed form value. The time spent during integration was   1.7369970000000001
+ The value for the mc integral is:  0.18819337555576068       which is   97.628034892578142       % of the closed form value, and with a standard deviation of   2.1695275867222307E-010  . The time spent during integration was   1.1154780000000004
+ The value for the mc integral with importance sampling is:  0.28183331581250598       which is   146.20510795759563      % of the closed form value, and with a standard deviation of   3.6294703699063706E-007  . The time spent during integration was   4.9416349999999998
+
+
+ Run from 20151022 at 163037.853 with                   12  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.14817891028423569       which is   76.869952413852360       % of the closed form value. The time spent during integration was  0.18696499999999999
+ The value for the laguerre integral is:                       NaN  which is                       NaN  % of the closed form value. The time spent during integration was  0.35315099999999994
+ The value for the mc integral is:  0.19784780534675958       which is   102.63640995211533       % of the closed form value, and with a standard deviation of   2.4250699673145443E-010  . The time spent during integration was   1.1152830000000000
+ The value for the mc integral with importance sampling is:  0.28378067626628944       which is   147.21532935231241      % of the closed form value, and with a standard deviation of   3.4428982591660301E-007  . The time spent during integration was   4.9425390000000000
+
+
+ Run from 20151022 at 163048.925 with                    9  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.25408505560062800       which is   131.81029672593834       % of the closed form value. The time spent during integration was   3.6996000000000001E-002
+ The value for the laguerre integral is:  0.18520249555437154       which is   96.076472642988676       % of the closed form value. The time spent during integration was   9.1402000000000011E-002
+ The value for the mc integral is:  0.19089653252004601       which is   99.030336656123325       % of the closed form value, and with a standard deviation of   2.2697718104535971E-010  . The time spent during integration was   1.1124790000000000
+ The value for the mc integral with importance sampling is:  0.28139028967151031       which is   145.97528174068592      % of the closed form value, and with a standard deviation of   3.5241570955727481E-007  . The time spent during integration was   4.9490850000000002
+
+
+ Run from 20151022 at 163058.685 with                   11  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.22500843413703256       which is   116.72637888651848       % of the closed form value. The time spent during integration was  0.11592200000000000
+ The value for the laguerre integral is:  0.18743164118733083       which is   97.232874174086689       % of the closed form value. The time spent during integration was  0.28171100000000004
+ The value for the mc integral is:  0.18842039997451271       which is   97.745807092635332       % of the closed form value, and with a standard deviation of   2.2395686268364191E-010  . The time spent during integration was   1.1107430000000000
+ The value for the mc integral with importance sampling is:  0.28469558171531850       which is   147.68994978375662      % of the closed form value, and with a standard deviation of   3.9127434399931276E-007  . The time spent during integration was   4.9400800000000000
+
+
+ Run from 20151022 at 163108.813 with                    8  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.10119626583692216       which is   52.497026226081907       % of the closed form value. The time spent during integration was   1.9137000000000001E-002
+ The value for the laguerre integral is:  0.18354611874200291       which is   95.217203219951685       % of the closed form value. The time spent during integration was   3.2483999999999999E-002
+ The value for the mc integral is:  0.19583457768591056       which is   101.59201899127710       % of the closed form value, and with a standard deviation of   2.5740296343050506E-010  . The time spent during integration was   1.1192420000000001
+ The value for the mc integral with importance sampling is:  0.28613064869104987       which is   148.43441152884276      % of the closed form value, and with a standard deviation of   4.4446642067587305E-007  . The time spent during integration was   4.9406479999999995
+
+
+ Run from 20151022 at 163118.157 with                   10  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.12983424786083370       which is   67.353393513330332       % of the closed form value. The time spent during integration was   6.5830000000000000E-002
+ The value for the laguerre integral is:                       NaN  which is                       NaN  % of the closed form value. The time spent during integration was  0.11829899999999999
+ The value for the mc integral is:  0.19274551919070107       which is   99.989525228332866       % of the closed form value, and with a standard deviation of   2.3653847539611759E-010  . The time spent during integration was   1.1172869999999999
+ The value for the mc integral with importance sampling is:  0.28336248666261749       which is   146.99838744828187      % of the closed form value, and with a standard deviation of   3.7746621884790623E-007  . The time spent during integration was   4.9437270000000000
+
+
+ Run from 20151022 at 163130.093 with                   13  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.20856932673558073       which is   108.19835420843278       % of the closed form value. The time spent during integration was  0.30519199999999996
+ The value for the laguerre integral is:                       NaN  which is                       NaN  % of the closed form value. The time spent during integration was  0.73692600000000008
+ The value for the mc integral is:  0.19144087048848302       which is   99.312719848512458       % of the closed form value, and with a standard deviation of   2.3527453056714436E-010  . The time spent during integration was   1.1145689999999999
+ The value for the mc integral with importance sampling is:  0.28294147509773576       which is   146.77998161106751      % of the closed form value, and with a standard deviation of   3.8395532361186678E-007  . The time spent during integration was   4.9468150000000000
+
+
+ Run from 20151022 at 163141.613 with                   14  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.16000958936865098       which is   83.007288263455450       % of the closed form value. The time spent during integration was  0.46607299999999996
+ The value for the laguerre integral is:                       NaN  which is                       NaN  % of the closed form value. The time spent during integration was  0.91097099999999998
+ The value for the mc integral is:  0.19148426531874466       which is   99.335231544210728       % of the closed form value, and with a standard deviation of   1.9587650588493766E-010  . The time spent during integration was   1.1164999999999998
+ The value for the mc integral with importance sampling is:  0.28298168415408037       which is   146.80084064047924      % of the closed form value, and with a standard deviation of   3.4677537164389409E-007  . The time spent during integration was   4.9410039999999995
+
+
+ Run from 20151022 at 163158.125 with                    7  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.30112312263764268       which is   156.21197418354069       % of the closed form value. The time spent during integration was   9.0799999999999995E-003
+ The value for the laguerre integral is:  0.18129431431267909       which is   94.049047110587722       % of the closed form value. The time spent during integration was   2.4258999999999996E-002
+ The value for the mc integral is:  0.19101108573599554       which is   99.089762793365139       % of the closed form value, and with a standard deviation of   2.1379249713029406E-010  . The time spent during integration was   1.1118150000000000
+ The value for the mc integral with importance sampling is:  0.28381690296780965       which is   147.23412247757312      % of the closed form value, and with a standard deviation of   3.8241059724713842E-007  . The time spent during integration was   4.9408370000000001
+
+
+ Run from 20151022 at 163208.477 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   4.1939999999999998E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   7.4449999999999994E-003
+ The value for the mc integral is:  0.19436365597420033       which is   100.82895708343354       % of the closed form value, and with a standard deviation of   2.1437872786249237E-010  . The time spent during integration was   1.1108460000000000
+ The value for the mc integral with importance sampling is:  0.28138975548282269       which is   145.97500462257972      % of the closed form value, and with a standard deviation of   3.3415477148879948E-007  . The time spent during integration was   4.9829119999999998
+
+
+ Run from 20151022 at 164453.662 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   4.2459999999999998E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   8.1339999999999989E-003
+ The value for the mc integral is:  0.19523775666364984       which is   101.28240945579890       % of the closed form value, and with a standard deviation of   3.2806716476118109E-010  . The time spent during integration was   1.1108900000000002
+ The value for the mc integral with importance sampling is:   1.2380883133359172E-004  which is   6.4227621560801640E-002 % of the closed form value, and with a standard deviation of   3.3455530234617950E-010  . The time spent during integration was   4.5199940000000005
+
+
+ Run from 20151022 at 164612.799 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   4.2470000000000008E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   6.5359999999999984E-003
+ The value for the mc integral is:  0.19930384977182189       which is   103.39175405238100       % of the closed form value, and with a standard deviation of   3.1223687398454712E-010  . The time spent during integration was   1.1114960000000000
+ The value for the mc integral with importance sampling is:                       NaN  which is                       NaN % of the closed form value, and with a standard deviation of                       NaN  . The time spent during integration was   4.4937819999999995
+
+
+ Run from 20151022 at 165027.854 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   4.3119999999999999E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   7.9599999999999983E-003
+ The value for the mc integral is:  0.18760703844219656       which is   97.323864036336232       % of the closed form value, and with a standard deviation of   2.0648181151846932E-010  . The time spent during integration was   1.7094159999999998
+ The value for the mc integral with importance sampling is:   12.334383959881126       which is   6398.6400374488112      % of the closed form value, and with a standard deviation of                       NaN  . The time spent during integration was   5.0832819999999996
+
+
+ Run from 20151022 at 165105.470 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   3.7109999999999999E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   7.0699999999999999E-003
+ The value for the mc integral is:  0.18932697977433827       which is   98.216108473164269       % of the closed form value, and with a standard deviation of   2.0457444059800332E-010  . The time spent during integration was   1.1251890000000000
+ The value for the mc integral with importance sampling is:  0.19269869643813373       which is   99.965235248369908      % of the closed form value, and with a standard deviation of                       NaN  . The time spent during integration was   4.4937730000000000
+
+
+ Run from 20151022 at 165234.925 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   3.0059999999999996E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   5.6660000000000000E-003
+ The value for the mc integral is:  0.19050014513499669       which is   98.824704968268790       % of the closed form value, and with a standard deviation of   2.2305983650577352E-010  . The time spent during integration was   1.1195879999999998
+ The value for the mc integral with importance sampling is:  0.19205637947412901       which is   99.632024035229364      % of the closed form value, and with a standard deviation of   4.1113394315536865E-009  . The time spent during integration was   4.4960319999999996
+
+
+ Run from 20151022 at 165651.646 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   4.2500000000000003E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   8.0280000000000004E-003
+ The value for the mc integral is:  0.19168788780068832       which is   99.440863651150750       % of the closed form value, and with a standard deviation of   2.9368349674374147E-010  . The time spent during integration was   1.1197770000000000
+ The value for the mc integral with importance sampling is:                       NaN  which is                       NaN % of the closed form value, and with a standard deviation of                       NaN  . The time spent during integration was   4.5049060000000001
+
+
+ Run from 20151022 at 165743.471 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   4.1929999999999997E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   6.8159999999999991E-003
+ The value for the mc integral is:  0.19827673112791575       which is   102.85892140346358       % of the closed form value, and with a standard deviation of   3.0872767497200522E-010  . The time spent during integration was   1.1178520000000001
+ The value for the mc integral with importance sampling is:  0.19277901860595767       which is   100.00690353440710      % of the closed form value, and with a standard deviation of   1.3330966563201600E-005  . The time spent during integration was   4.4930239999999992
+
+
+ Run from 20151022 at 170013.582 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   5.5570000000000003E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   5.6809999999999986E-003
+ The value for the mc integral is:  0.19420640297844335       which is   100.74737981796717       % of the closed form value, and with a standard deviation of   7.0677620388817198E-007  . The time spent during integration was   1.1211249999999999
+ The value for the mc integral with importance sampling is:                       NaN  which is                       NaN % of the closed form value, and with a standard deviation of                       NaN  . The time spent during integration was   4.4927669999999997
+
+
+ Run from 20151022 at 170118.046 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   5.6889999999999996E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   5.7400000000000003E-003
+ The value for the mc integral is:  0.19304389797149848       which is   100.14431353550292       % of the closed form value, and with a standard deviation of   8.2119943008917724E-007  . The time spent during integration was   1.1036270000000001
+ The value for the mc integral with importance sampling is:                       NaN  which is                       NaN % of the closed form value, and with a standard deviation of                       NaN  . The time spent during integration was   4.5275809999999996
+
+
+ Run from 20151022 at 170250.702 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   7.6150000000000002E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   8.0619999999999997E-003
+ The value for the mc integral is:  0.19176584959990794       which is   99.481307461842945       % of the closed form value, and with a standard deviation of   7.2189423981052994E-007  . The time spent during integration was   1.1043400000000001
+ The value for the mc integral with importance sampling is:  0.19260982616983652       which is   99.919132511604531      % of the closed form value, and with a standard deviation of   3.2976222526944724E-004  . The time spent during integration was   4.4954590000000003
+
+
+ Run from 20151022 at 170311.918 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   4.2470000000000008E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   8.0099999999999998E-003
+ The value for the mc integral is:  0.19091938719125712       which is   99.042192847298324       % of the closed form value, and with a standard deviation of   7.3001030380549434E-007  . The time spent during integration was   1.1021320000000001
+ The value for the mc integral with importance sampling is:                       NaN  which is                       NaN % of the closed form value, and with a standard deviation of                       NaN  . The time spent during integration was   4.4850309999999993
+
+
+ Run from 20151022 at 170722.606 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   4.1849999999999995E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   6.2979999999999998E-003
+ The value for the mc integral is:  0.19650586478758492       which is   101.94025888224915       % of the closed form value, and with a standard deviation of   8.5712698965930163E-007  . The time spent during integration was   1.1082220000000000
+ The value for the mc integral with importance sampling is:  0.19270679943160704       which is   99.969438793405487      % of the closed form value, and with a standard deviation of   3.2902240574756201E-004  . The time spent during integration was   4.4943049999999998
+
+
+ Run from 20151022 at 170732.478 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   4.2469999999999999E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   7.1399999999999988E-003
+ The value for the mc integral is:  0.19690124393805825       which is   102.14536753383807       % of the closed form value, and with a standard deviation of   7.9060644226371711E-007  . The time spent during integration was   1.1150610000000001
+ The value for the mc integral with importance sampling is:  0.19288505801321784       which is   100.06191301027953      % of the closed form value, and with a standard deviation of   3.2353873504441087E-004  . The time spent during integration was   4.4991330000000005
+
+
+ Run from 20151022 at 170741.118 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   4.1869999999999997E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   7.2379999999999996E-003
+ The value for the mc integral is:  0.18866511497080038       which is   97.872756535599279       % of the closed form value, and with a standard deviation of   6.5132106118128715E-007  . The time spent during integration was   1.1084120000000000
+ The value for the mc integral with importance sampling is:  0.19262224134809927       which is   99.925573064854902      % of the closed form value, and with a standard deviation of   3.2304059493344319E-004  . The time spent during integration was   4.5048969999999997
+
+
+ Run from 20151022 at 170748.494 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   4.1869999999999997E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   8.0159999999999988E-003
+ The value for the mc integral is:  0.19280408346170491       which is   100.01990629077004       % of the closed form value, and with a standard deviation of   7.1516740061090871E-007  . The time spent during integration was   1.1161939999999999
+ The value for the mc integral with importance sampling is:  0.19244798272558788       which is   99.835173884604089      % of the closed form value, and with a standard deviation of   3.1993198696031526E-004  . The time spent during integration was   4.5054720000000010
+
+
+ Run from 20151022 at 170800.190 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   4.2449999999999996E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   8.0210000000000004E-003
+ The value for the mc integral is:  0.18893667773423517       which is   98.013633645996194       % of the closed form value, and with a standard deviation of   6.4812497985640300E-007  . The time spent during integration was   1.1141470000000000
+ The value for the mc integral with importance sampling is:  0.19342529317035767       which is   100.34216780998058      % of the closed form value, and with a standard deviation of   3.8488646576790068E-004  . The time spent during integration was   4.4938399999999996
+
+
+ Run from 20151022 at 171030.574 with                    6  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:   5.9422756562667364E-002  which is   30.826414234726155       % of the closed form value. The time spent during integration was   4.2710000000000005E-003
+ The value for the laguerre integral is:  0.17812255719186881       which is   92.403652239770381       % of the closed form value. The time spent during integration was   8.0560000000000007E-003
+ The value for the mc integral is:  0.19218083560747884       which is   99.696587454071249       % of the closed form value, and with a standard deviation of   2.7022751860836199E-003  . The time spent during integration was   1.1190450000000001
+ The value for the mc integral with importance sampling is:  0.19223315503537225       which is   99.723728913842891      % of the closed form value, and with a standard deviation of   3.2050290775894160E-004  . The time spent during integration was   4.5046739999999996
+
+
+ Run from 20151023 at 171427.183 with                    5  zeros,                10000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.35460216492989605       which is   183.95500069290264       % of the closed form value. The time spent during integration was   4.9219999999999993E-003
+ The value for the laguerre integral is:                       NaN  which is                       NaN  % of the closed form value. The time spent during integration was   4.1150000000000006E-003
+ The value for the mc integral is:  0.29674996181714780       which is   153.94333377091561       % of the closed form value, and with a standard deviation of  0.14145177797640601       . The time spent during integration was   0.0000000000000000
+ The value for the mc integral with importance sampling is:  0.19599821429256334       which is   101.67690784720426      % of the closed form value, and with a standard deviation of   1.0081392540881003E-002  . The time spent during integration was   5.6779999999999990E-003
+
+
+ Run from 20151023 at 172630.383 with                    5  zeros,                10000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.35460216492989605       which is   183.95500069290264       % of the closed form value. The time spent during integration was   1.4220000000000005E-003
+ The value for the laguerre integral is:   2.9975788010751594E-002  which is   15.550373487929084       % of the closed form value. The time spent during integration was   8.5070000000000007E-003
+ The value for the mc integral is:  0.20124497020687668       which is   104.39873834715006       % of the closed form value, and with a standard deviation of   5.1692711991001367E-002  . The time spent during integration was   1.1210000000000005E-003
+ The value for the mc integral with importance sampling is:  0.19054480231117826       which is   98.847871524166848      % of the closed form value, and with a standard deviation of   7.8294936651181063E-003  . The time spent during integration was   4.5569999999999986E-003
+
+
+ Run from 20151023 at 172642.270 with                   10  zeros,                10000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.12983424786083370       which is   67.353393513330332       % of the closed form value. The time spent during integration was   6.9189000000000001E-002
+ The value for the laguerre integral is:  0.18645734336682407       which is   96.727443091109947       % of the closed form value. The time spent during integration was  0.25467699999999999
+ The value for the mc integral is:  0.22177159372118310       which is   115.04722111527893       % of the closed form value, and with a standard deviation of   5.5992305936107954E-002  . The time spent during integration was   0.0000000000000000
+ The value for the mc integral with importance sampling is:  0.18755913157472093       which is   97.299011656088013      % of the closed form value, and with a standard deviation of   9.3129442627898247E-003  . The time spent during integration was   5.7240000000000069E-003
+
+
+ Run from 20151023 at 172647.407 with                   15  zeros,                10000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.19947477699708382       which is   103.48042502213583       % of the closed form value. The time spent during integration was  0.70691099999999996
+ The value for the laguerre integral is:  0.18975897999430152       which is   98.440214834100857       % of the closed form value. The time spent during integration was   3.6753420000000001
+ The value for the mc integral is:   8.5457932186937896E-002  which is   44.332538064932777       % of the closed form value, and with a standard deviation of   1.2023395298482419E-002  . The time spent during integration was   1.1270000000003222E-003
+ The value for the mc integral with importance sampling is:  0.17774014890538176       which is   92.205272411436255      % of the closed form value, and with a standard deviation of   6.8024395869449574E-003  . The time spent during integration was   4.5250000000001123E-003
+
+
+
+
+
+
+
+
+
+ ################################################################FINAL RESULTS#############################################################
+
+
+
+
+
+
+
+
+
+
+
+ Run from 20151023 at 172705.519 with                    5  zeros,                10000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.35460216492989605       which is   183.95500069290264       % of the closed form value. The time spent during integration was   1.4220000000000001E-003
+ The value for the laguerre integral is:   2.9975788010751594E-002  which is   15.550373487929084       % of the closed form value. The time spent during integration was   8.4999999999999989E-003
+ The value for the mc integral is:  0.17390370238207950       which is   90.215060301502106       % of the closed form value, and with a standard deviation of   5.0396072196770066E-002  . The time spent during integration was   1.1110000000000009E-003
+ The value for the mc integral with importance sampling is:  0.19833928837644826       which is   102.89137388073320      % of the closed form value, and with a standard deviation of   1.1016962021517859E-002  . The time spent during integration was   4.5069999999999989E-003
+
+
+ Run from 20151023 at 172716.190 with                   10  zeros,               100000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.12983424786083370       which is   67.353393513330332       % of the closed form value. The time spent during integration was   6.6445000000000004E-002
+ The value for the laguerre integral is:  0.18645734336682407       which is   96.727443091109947       % of the closed form value. The time spent during integration was  0.26447599999999999
+ The value for the mc integral is:  0.18331750627607804       which is   95.098607197460026       % of the closed form value, and with a standard deviation of   1.6420882133938441E-002  . The time spent during integration was   1.1143999999999987E-002
+ The value for the mc integral with importance sampling is:  0.19093969142972242       which is   99.052725964606523      % of the closed form value, and with a standard deviation of   3.1330764194036510E-003  . The time spent during integration was   4.6063999999999994E-002
+
+
+ Run from 20151023 at 172722.719 with                   15  zeros,              1000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.19947477699708382       which is   103.48042502213583       % of the closed form value. The time spent during integration was  0.70460799999999990
+ The value for the laguerre integral is:  0.18975897999430152       which is   98.440214834100857       % of the closed form value. The time spent during integration was   3.6525009999999996
+ The value for the mc integral is:  0.18484402980291373       which is   95.890513350915981       % of the closed form value, and with a standard deviation of   8.0703167970042119E-003  . The time spent during integration was  0.11107900000000015
+ The value for the mc integral with importance sampling is:  0.19273893643257078       which is   99.986110327364457      % of the closed form value, and with a standard deviation of   1.1068200514622046E-003  . The time spent during integration was  0.45202200000000037
+
+
+ Run from 20151023 at 172733.823 with                   20  zeros,             10000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.17706518178265310       which is   91.855123456328272       % of the closed form value. The time spent during integration was   4.0682969999999994
+ The value for the laguerre integral is:  0.19108177836842877       which is   99.126435618672929       % of the closed form value. The time spent during integration was   16.279783000000002
+ The value for the mc integral is:  0.19223097906035816       which is   99.722600095339189       % of the closed form value, and with a standard deviation of   2.8282526275018203E-003  . The time spent during integration was   1.1099069999999998
+ The value for the mc integral with importance sampling is:  0.19272611427069011       which is   99.979458645477195      % of the closed form value, and with a standard deviation of   3.4264000744131618E-004  . The time spent during integration was   4.5022440000000010
+
+
+ Run from 20151023 at 172832.191 with                   25  zeros,            100000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.18910953004332778       which is   98.103303280825386       % of the closed form value. The time spent during integration was   15.213932999999999
+ The value for the laguerre integral is:  0.19174073880012252       which is   99.468280871345840       % of the closed form value. The time spent during integration was   70.709834000000001
+ The value for the mc integral is:  0.19233636534256779       which is   99.777270753147292       % of the closed form value, and with a standard deviation of   9.8653417200455845E-004  . The time spent during integration was   11.470521000000005
+ The value for the mc integral with importance sampling is:  0.19287509815663320       which is   100.05674619065422      % of the closed form value, and with a standard deviation of   1.0492044769436883E-004  . The time spent during integration was   45.025495000000006
+
+
+ Run from 20151023 at 173118.479 with                   30  zeros,           1000000000  mc cycles and   1.0000000000000000E-004 proximity threshold.
+ The value for the legendre integral is:  0.18579562359333507       which is   96.384166389979995       % of the closed form value. The time spent during integration was   45.008597999999999
+ The value for the laguerre integral is:  0.19211371044374778       which is   99.661765304739191       % of the closed form value. The time spent during integration was   186.02131700000001
+ The value for the mc integral is:  0.19220642386184852       which is   99.709861731038046       % of the closed form value, and with a standard deviation of   3.1022189788010193E-004  . The time spent during integration was   111.04346300000000
+ The value for the mc integral with importance sampling is:  0.19278900996476270       which is   100.01208669626473      % of the closed form value, and with a standard deviation of   3.2791230689773028E-005  . The time spent during integration was   449.93694800000003
+
+

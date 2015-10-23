@@ -1,0 +1,118 @@
+\documentclass[11pt,a4paper,oneside]{article}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{calc}
+\usepackage[cp1252]{inputenc}
+\usepackage[left=1.0in,right=1.5in,top=1.0in,bottom=1.0in,includeheadfoot]{geometry}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\pagestyle{fancy}
+\fancyhead[LO]{\nouppercase{\leftmark}}
+\fancyhead[R]{\nouppercase{\rightmark}}
+\fancyhead[RO]{\thepage}
+\fancyfoot[LO]{\today}
+\fancyfoot[C]{}
+\fancyfoot[R]{FYS4150}
+\renewcommand{\footrulewidth}{0.5 pt}
+\setlength{\headheight}{16.0 pt}
+\begin{document}
+	\title{\textbf{\textbf{\Huge Project 3}}}
+	\author{Jose Emilio Ruiz Navarro}
+	\maketitle
+	
+	\section{Introduction}
+	
+		All the files are located here: \url{https://github.com/jeruiznavarro/FYS3150/tree/master/Project3}.\\
+	
+		The objective of this project is to find out the value of the ground-state correlation energy between the two electrons of an helium atom. Since the integral needed to obtain this value can be easily computed by analytical means, four different numerical approaches will be used instead: two attempts with different polynomials with Gaussian quadrature and the other two using Monte Carlo integration. The results will be compared with the closed form solution and also between the different methods.\\
+	
+	\section{Theory and methods}
+	
+		First of all, a wave function is required. For the sake of simplicity the product of two ground-state hydrogen-like wave functions will be used:\\
+	
+		\begin{equation*}\psi_{1s}\left(\boldsymbol{r}_i\right)=\exp{\left(-\alpha r_i\right)}\end{equation*}\\
+		
+		With $i=1,2$ for each electron and $\boldsymbol{r}_i=\sqrt{x_i^2+y_i^2+z_i^2}$. Thus, the total wave function will be:\\
+		
+		\begin{equation*}\Psi\left(\boldsymbol{r}_1,\boldsymbol{r}_2\right)=\exp{\left(-\alpha\left[r_1+r_2\right]\right)}\end{equation*}\\
+		
+		Since the atomic number of helium is two, $\alpha=2$. Notice that the wave function is not normalized, but this is not a problem when it comes to evaluating the following integral:\\
+		
+		\begin{equation*}\int_{-\infty}^\infty{d\boldsymbol{r}_1d\boldsymbol{r}_2\frac{\Psi\left(\boldsymbol{r}_1,\boldsymbol{r}_2\right)\Psi^*\left(\boldsymbol{r}_1,\boldsymbol{r}_2\right)}{r_{12}}}=\frac{5\pi^2}{256}\end{equation*}\\
+		
+		Where $r_{12}=\sqrt{\left(x_1-x_2\right)^2+\left(y_1-y_2\right)^2+\left(z_1-z_2\right)^2}$. This factor can be dangerous since it introduces singularities in points where it is null. To avoid this, simply ignore those points while integrating, a threshold of $0.0001$ was found to be enough to obtain good results. Working out the explicit form of the integral:\\
+		
+		\begin{equation*}\int_{-L}^L\int_{-L}^L\int_{-L}^L\int_{-L}^L\int_{-L}^L\int_{-L}^L{dx_1dx_2dy_1dy_2dz_1dz_2\frac{\exp{\left(-4\left[\sqrt{x_1^2+y_1^2+z_1^2}+\sqrt{x_2^2+y_2^2+z_2^2}\right]\right)}}{\sqrt{\left(x_1-x_2\right)^2+\left(y_1-y_2\right)^2+\left(z_1-z_2\right)^2}}}\end{equation*}\\
+		
+		This will be the form of the integral used for the Gauss-Legendre quadrature and the brute force Monte Carlo integration. The value of $L$ corresponds to the point where the exponential term is negligible. It is obviously not possible to numerically integrate all over the three dimensional space, so this limit accomplishes the function of making the integral numerically computable. This concrete value can be chosen by evaluating the exponential term; for $\exp{\left(-4*2\right)}$ the result is $3.35\times10^{-4}$ which is small enough as it can be seen in this plot:\\
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=1]{exp.eps}\par\end{center}\protect\end{figure}
+		
+		It will also be necessary to integrate in spherical coordinates, so in those cases the integral will read like this:\\
+		
+		\small\begin{equation*}\int_0^\infty\int_0^\infty\int_0^\pi\int_0^\pi\int_0^{2\pi}\int_0^{2\pi}{\frac{dr_1dr_2d\theta_1d\theta_2d\phi_1d\phi_2\exp{\left(-4\left[r_1+r_2\right]\right)}}{\sqrt{r_1^2+r_2^2-2r_1r_2\left[\cos{\left(\theta_1\right)}\cos{\left(\theta_2\right)}+\sin{\left(\theta_1\right)}\sin{\left(\theta_2\right)}\cos{\left(\phi_1-\phi_2\right)}\right]}}}\end{equation*}\normalsize\\
+		
+		There is no need to worry about the infinite upper integration limit for the radial variables since only the Gauss-Laguerre quadrature and the Monte Carlo integration with exponential importance sampling will be using this spherical version of the integral (the generalized Gauss-Laguerre weight function is already defined in the $\left[0,\infty\right)$ interval, and using a change of variable the uniform distribution from $\left[0,1\right]$ can be converted into a decaying exponential from $\left[0,\infty\right)$).\\
+		
+		For the Gauss-Laguerre quadrature the previous original integrand changes because the weight function already absorbs some factors since it has this form:\\
+		
+		\begin{equation*}\int_0^\infty{dxx^\alpha\exp{\left(-x\right)}}\end{equation*}\\
+		
+		Fixing $\alpha=2$ (do not confuse this value with the former one that represents the nuclear charge of the atom) and making the variable change $x=4r_i$ yields this new integrand:\\
+		
+		\begin{equation*}\frac{\sin{\left(\theta_1\right)}\sin{\left(\theta_2\right)}}{256r_{12}}\end{equation*}\\
+		
+		Where the $r_i^2\exp{\left(-4r_i\right)}$ factors have been absorbed into the weights. For the Monte Carlo importance sampling, the $\left[0,1\right]$ uniform distribution can be converted into an exponential distribution very easily with just a few steps (see lecture notes section 11.4.1.2). The result is:\\
+		
+		\begin{equation*}r_i=y\left(x\right)=\frac{1}{4\log{\left(1-x\right)}}\hspace{0.5 cm}x\in\left[0,1\right]\end{equation*}\\
+		
+		The $4$ factor comes from the fact that the distribution is not $\exp{\left(-y\right)}$ but $\exp{\left(-4y\right)}$. After this, the exponential terms of the integral are absorbed "inside" of the random numbers and the integrands becomes:\\
+		
+		\begin{equation*}\frac{r_1^2r_2^2\sin{\left(\theta_1\right)}\sin{\left(\theta_2\right)}}{r_{12}}\end{equation*}\\
+		
+		Finally, to test the methods before starting the proper calculations, a few known simple cases are computed. For the Gauss-Legendre quadrature, the following integral was computed:\\
+		
+		\begin{equation*}\left(\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}{dx\cos{\left(x\right)}}\right)^6=2^6=64\end{equation*}\\
+		
+		In this case, just $10$ integrations points provide an accuracy in the range of a billionth part of the analytical value. For the Gauss-Laguerre case the integral was:\\
+		
+		\begin{equation*}\left(\int_0^\infty{dxx^2\exp{\left(-x\right)}\cos{\left(x\right)}}\right)^6=\frac{1}{2^6}=\frac{1}{64}\end{equation*}\\
+		
+		And with just $20$ integration points the accuracy approaches a millionth part of the right value. Finally, for the brute force Monte Carlo integration the chosen integral was:\\
+
+		\begin{equation*}\int_{-1}^1{dxx^2}=\frac{2}{3}\end{equation*}\\
+		
+		Using $1000000000$ Monte Carlo cycles the accuracy stays in a thousandth part of the proper value which is quite good considering it only takes $\sim10$ seconds to run such a calculation.\\
+		
+	\section{Results and discussion}
+
+		First, the result from both quadrature methods:\newpage
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=1]{quadrature.eps}\par\end{center}\protect\end{figure}
+		
+		And then, the Monte Carlo methods:\\	
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=1]{mc_values.eps}\par\end{center}\protect\end{figure}\newpage
+		
+		As it can be seen, the Gauss-Laguerre quadrature clearly outperforms the Gauss-Legendre one, converging to the right value considerably faster and in a more stable fashion with no oscillations around it (at least compared to the Gauss-Legendre quadrature, as $n$ increases the Gauss-Laguerre quadrature always gets closer to the closed form value, while this is not true for the Gauss-Legendre quadrature). This is a consequence of the symmetry of the problem. Since the integrand exhibits spherical symmetry, a result obtained by numerical means will be better when integrated in spherical coordinates instead of cartesian ones, because the former are naturally better at sampling the integration area. This is the reason that causes the inferior converging stability for the Gauss-Legendre quadrature.\\
+		
+		As for the Monte Carlo results, the same argument can be repeated. Since spherical coordinates were used for the importance sampling result, they will be naturally better despite the fact that the random numbers are also tailored to the integrand and thus, the results are closer to the actual value and they approximate it in a better way as the number of cycles grows. When comparing to the quadratures, the brute force Monte Carlo method displays a slower convergence, since a lot of cycles are required to get close to the right value, but it is more stable than the Gauss-Legendre quadrature and about as much as the Gauss-Laguerre method while providing approximately equally good results compared to the latter. In the case of the importance sampling method, the convergence and the stability are the best of the four methods, and it offers the best estimated value for the integral of all for $10^9$ cycles, with a deviation of just $\sim0.12\%$.\\
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=1]{mc_sd.eps}\par\end{center}\protect\end{figure}\newpage
+		
+		When comparing the standard deviations of the results from the Monte Carlo methods the expected outcome is observed, the one corresponding to the importance sampling method is better than the one for the brute force attempt. The reason for this is obviously due to the more efficient use of the random numbers made by the importance sampling method. The relative difference between the two values doesn't change much, showing a very slight growing tendency as the number of cycles grows as well and staying roughly at one order of magnitude, which is a good result.\\
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=1]{mc_time.eps}\par\end{center}\protect\end{figure}
+		
+		Finally, for the comparison of run times the expected behaviour is seen again: linear trends with different slopes associated with different computational loads per cycle (using spherical coordinates and exponentially distributed random numbers is more computationally expensive than using cartesian ones and crude uniformly distributed random numbers). If the importance sampling results with $10^4$ or $10^5$ cycles are compared with the brute force ones with $10^6$ or $10^7$ cycles respectively, it will become apparent that for quite similar accuracies the times needed to obtain the values are much smaller in the case of the importance sampling method, about a bit more than one order of magnitude, which is quite remarkable and speaks quite well about how convenient the method is (especially since Monte Carlo methods are usually very demanding computationally since the amount of cycles needed can become huge in many cases). Comparing to the time used by the quadratures, shown below, it is obvious that their computational needs grow much faster with the amount of points. However, this does not contain much information since Monte Carlo cycles and quadrature mesh points are not directly comparable, this would require a metric relating the relative increase in accuracy with the relative increase in cycles or points.\\
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=1]{quadrature_time.eps}\par\end{center}\protect\end{figure}
+		
+		In any case, when comparing the accuracies and the stabilities of all methods, the Monte Carlo integration with importance sampling is the overall best one.
+		
+\end{document}
