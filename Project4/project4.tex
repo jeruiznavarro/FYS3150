@@ -1,0 +1,171 @@
+\documentclass[11pt,a4paper,oneside]{article}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{calc}
+\usepackage[cp1252]{inputenc}
+\usepackage[left=1.0in,right=1.5in,top=1.0in,bottom=1.0in,includeheadfoot]{geometry}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{float}
+\pagestyle{fancy}
+\fancyhead[LO]{\nouppercase{\leftmark}}
+\fancyhead[R]{\nouppercase{\rightmark}}
+\fancyhead[RO]{\thepage}
+\fancyfoot[LO]{\today}
+\fancyfoot[C]{}
+\fancyfoot[R]{FYS4150}
+\renewcommand{\footrulewidth}{0.5 pt}
+\setlength{\headheight}{16.0 pt}
+\begin{document}
+	\title{\textbf{\textbf{\Huge Project 4}}}
+	\author{Jose Emilio Ruiz Navarro}
+	\maketitle
+	\begin{abstract}In this project a basic study of the two dimensional Ising model is conducted. Using a Monte Carlo Metropolis algorithm, it is first tested against a simple case with a closed form solution. Then, after satisfactory results, it is used to calculate in a rough manner the value of the critical temperature with an error of less than $1\%$ and study some general properties of the model like how fast the equilibrium is reached and how some expectation values relevant to the model depend on temperature, especially around the area where the phase transition between ferromagnetism and paramagnetism occurs.\end{abstract}
+	\newpage
+	
+	\section{Introduction}
+	
+		All the files are located here: \url{https://github.com/jeruiznavarro/FYS3150/tree/master/Project4}.\\
+	
+		The Ising model is one of the staples of statistical mechanics because of its simplicity and usefulness. It is used to describe magnetic systems composed of discrete spins that interact with each other, usually only the closest neighbours. Historically it has been very important for physicists, and many great scientists have worked on it. The main application is obviously in the field of magnetism, but it can be applied to a lattice gas, a simple model of neurons and others. One of the reasons to attack the problem using computational methods is to find results where there are no possible analytical ones. This is not the case in two dimensions, but the model has no solution in three and four dimensions (for five and higher ones a mean field approach solves the problem because there are enough nearest neighbours when the dimensionality reaches that point so that the individual degree of freedom become less relevant), so it is important to know how good of an approximation can be obtained by using numerical methods.\\
+	
+	\section{Theory and methods}
+	
+		First of all, a small overview of the model is in order. The system is composed of a lattice (which will be two dimensional in this case) of spins with only two possible values, for simplicity these will be $\pm1$. These spins can interact only with their four nearest neighbours (up, down, right and left; considering periodic boundary conditions), and when this happens, the interaction energy will be $-J$ if they are parallel or $J$ if they are anti-parallel, where $J$ is just a coupling constant that adds the dimensions of energy, so it can be taken to be just $1$ for simplicity. Thus, the total energy of the system is:\\
+	
+		\begin{equation*}E=-J\sum_{\left<i,j\right>}{s_is_j}\end{equation*}\\
+		
+		Where the index $\left<i,j\right>$ means that the summation is only carried out for the four nearest neighbours of a certain spin. It would be convenient to test the code against a simple case that can be solved analytically. The simplest case would be a square lattice with just four sites. This means that there are only $16$ possible microstates, so it will be quite easy to find the partition function. The possible energies of the system are $0$, $\pm8J$, with corresponding degeneracies of $12$ for $0$ and $2$ for $\pm8J$. Then the partition function will be:\\
+		
+		\begin{equation*}Q=\sum_i^N{\exp{\left(-E_i\beta\right)}}=12\exp{\left(-0J\beta\right)}+2\exp{\left(-8J\beta\right)}+2\exp{\left(8J\beta\right)}=4\cosh{\left(8J\beta\right)}+12\end{equation*}\\
+		
+		Having the partition function makes obtaining expectation values trivial. In the case of energy it will be:\\
+		
+		\begin{equation*}\left<E\right>=-\frac{1}{Q}\frac{\partial Q}{\partial\beta}=\frac{1}{Q}\sum_i^N{E_i\exp{\left(-E_i\beta\right)}}=\frac{16J\exp{\left(-8J\beta\right)}-16J\exp{\left(8J\beta\right)}}{4\cosh{\left(8J\beta\right)}+12}=-\frac{8J\sinh{\left(8J\beta\right)}}{\cosh{\left(8J\beta\right)}+3}\end{equation*}\\
+		
+		The expectation value for $\left<E^2\right>$ will be needed later on and it can be obtained in the same way:\\
+		
+		\begin{equation*}\left<E^2\right>=\frac{1}{Q}\sum_i^N{E_i^2\exp{\left(-E_i\beta\right)}}=\frac{128\exp{\left(-8J\beta\right)}+128\exp{\left(8J\beta\right)}}{4\cosh{\left(8J\beta\right)}+12}=\frac{64J\cosh{\left(8J\beta\right)}}{\cosh{\left(8J\beta\right)}+3}\end{equation*}\\
+		
+		For the absolute value of the magnetisation there are only two non null values which are $2$ and $4$ with degeneracies of $8$ and $2$ respectively (and corresponding energies of $0$ and $8$), thus:\\
+		
+		\begin{equation*}\left<\left|\mathcal{M}\right|\right>=\frac{1}{Q}\sum_i^N{\left|\mathcal{M}_i\right|\exp{\left(-E_i\beta\right)}}=\frac{8\exp{\left(8J\beta\right)}+16\exp{\left(0J\beta\right)}}{4\cosh{\left(8J\beta\right)}+12}=\frac{2\exp{\left(8J\beta\right)}+4}{\cosh{\left(8J\beta\right)}+3}\end{equation*}\\
+		
+		With the same process the value for $\left<\left|\mathcal{M}^2\right|\right>$ can be found:\\
+		
+		\begin{equation*}\left<\left|\mathcal{M}^2\right|\right>=\frac{1}{Q}\sum_i^N{\left|\mathcal{M}_i^2\right|\exp{\left(-E_i\beta\right)}}=\frac{32\exp{\left(8J\beta\right)}+32\exp{\left(0J\beta\right)}}{4\cosh{\left(8J\beta\right)}+12}=\frac{8\exp{\left(8J\beta\right)}+8}{\cosh{\left(8J\beta\right)}+3}\end{equation*}\\
+		
+		And with these the expectation values for the specific heat $C_V$ and the susceptibility $\chi$ are obtained:\\
+		
+		\begin{equation*}C_V=\frac{\left<E^2\right>-\left<E\right>^2}{kT^2}=\frac{64J}{kT^2}\frac{3\cosh{\left(8J\beta\right)}+1}{\left(\cosh{\left(8J\beta\right)}+3\right)^2}\end{equation*}\\
+		
+		Same for the susceptibility:\\
+		
+		\begin{equation*}\chi=\frac{\left<\left|\mathcal{M}^2\right|\right>-\left<\left|\mathcal{M}\right|\right>^2}{kT}=\frac{4}{kT}\frac{3+3\exp{\left(8J\beta\right)}+\exp{\left(-8J\beta\right)}}{\left(\cosh{\left(8J\beta\right)}+3\right)^2}\end{equation*}\\
+		
+		As a final remark about the critical temperature, it will be possible to estimate it using the following equation:\\
+		
+		\begin{equation*}T_C\left(L\right)-T_C\left(\infty\right)=aL^{\frac{-1}{\nu}}\end{equation*}\\
+		
+		With $\nu=1$. $T_C\left(L\right)$ can be estimated from the specific heat results, and knowing that, the constant $a$ can be roughly guessed from several instances of the equation for different values of $L$. Then it will only be necessary to solve for $T_C\left(\infty\right)$ with the biggest possible value of $T_C\left(L\right)$. The exact analytical value was calculated by Onsager and is exactly $\frac{2}{\ln{\left(1+\sqrt{2}\right)}}$.\\
+		
+		For the code, two modified versions of the program ising\_2dim.f90 were used, a serial one and one with parallelisation using MPI. MPI was chosen over OpenMP since it suits better to the approach taken thanks to the private behaviour of the variables and the threads. The parallelisation was very simple, since the program runs through a range of temperatures and performs a single Monte Carlo Metropolis experiment for each value, the temperature loop was equally split between the threads. All the experiments at different temperatures are independent of each other, so the only problem lies in dealing with the output, which can be easily solved by assigning a different output file to each thread. As for the main algorithm, it is quite straight forward:\\
+		
+		\begin{enumerate}
+			\item Read input parameters.
+			\item Initialize the system.
+			\item Start temperature loop.
+			\item Reset variables and perform Monte Carlo Metropolis sampling.
+			\item Output of results.
+			\item Next iteration of temperature until the end is reached.\\
+		\end{enumerate}
+		
+		The sampling is the most important part and actually consists of these steps each cycle:\\
+		
+		\begin{enumerate}
+			\item Select a random spin to flip.
+			\item Calculate the difference between the new and old energies $dE$.
+			\item If a random uniform number $\left[0,1\right]$ is smaller than $\exp{\left(-dE/T\right)}$ keep the new configuration.
+			\item Otherwise reject it and keep the old one.
+		\end{enumerate}
+		
+	\section{Results}
+
+		First of all, the results from the simple 2x2 lattice compared to the analytical ones (marked as $\infty$, all the values are given as energy, magnetisation, etc. per spin):\vspace{3 cm}
+		
+		\begin{table}[ht!]\begin{center}\begin{tabular}{|c|c|c|c|c|}
+			\hline MC cycles & $\left<E\right>$ & $C_V$ & $\left<\left|\mathcal{M}\right|\right>$ & $\chi$\\ 
+			\hline $10^4$ & $-1.993800$ & $0.049446$ & $0.997900$ & $0.006382$\\ 
+			\hline $10^5$ & $-1.995360$ & $0.037034$ & $0.998450$ & $0.004650$\\ 
+			\hline $10^6$ & $-1.995910$ & $0.032653$ & $0.998620$ & $0.004182$\\ 
+			\hline $10^7$ & $-1.995949$ & $0.032349$ & $0.998646$ & $0.004064$\\ 
+			\hline $10^8$ & $-1.995968$ & $0.032195$ & $0.998656$ & $0.004024$\\ 
+			\hline $10^9$ & $-1.995976$ & $0.032133$ & $0.998659$ & $0.004016$\\ 
+			\hline $\infty$ & $-1.995982$ & $0.032082$ & $0.998661$ & $0.004011$\\
+			\hline
+		\end{tabular}\protect\caption{\scriptsize Values for energy and magnetisation expectation values, specific heat and susceptibility. The results are quite good.}\end{center}\end{table}\vspace{3 cm}
+		
+		Now, it would be convenient to see what happens as the simulation runs and the system approaches equilibrium. For a temperature of $T=1$, a size of $L=20$ and two different initial configurations this is the result for the energy:\newpage
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=1]{energy_T1.eps}\par\protect\caption{\scriptsize Expectation value of the energy vs. number of Monte Carlo cycles for $T=1$.}\end{center}\end{figure}
+		
+		And for the magnetisation:\\
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=1]{magnetisation_T1.eps}\par\protect\caption{\scriptsize Expectation value of the magnetisation vs. number of Monte Carlo cycles for $T=1$.}\end{center}\end{figure}
+		
+		Increasing the temperature to $T=2.4$ and keeping the other parameters this is what is obtained for the energy:\\
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=0.9]{energy_T24.eps}\par\protect\caption{\scriptsize Expectation value of the energy vs. number of Monte Carlo cycles for $T=2.4$.}\end{center}\end{figure}
+		
+		And for the magnetisation:\\
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=0.9]{magnetisation_T24.eps}\par\protect\caption{\scriptsize Expectation value of the magnetisation vs. number of Monte Carlo cycles for $T=2.4$.}\end{center}\end{figure}
+		
+		It is interesting to wonder how the algorithm woks when the temperature changes, this would be evidenced by the rate of acceptance of movements, since this depends on the energy which is heavily influenced by the temperature. Using $10^5$ MC cycles per point, the following data is collected:\vspace{2.5 cm}
+		
+		\begin{figure}[H]\begin{center}\includegraphics[scale=1]{acceptance.eps}\par\protect\caption{\scriptsize Acceptance rate of Metropolis moves as a function of temperature for a whole run of cycles.}\end{center}\end{figure}\vspace{3 cm}
+		
+		It would also be nice to see how common are certain energies along a simulation, that is, a histogram of frequencies for these values. Here are the plots for the two previous temperatures with $10^6$ MC cycles:\\
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=0.9]{energy_histogram_T1.eps}\par\protect\caption{\scriptsize Energy histogram for $T=1$.}\end{center}\end{figure}\newpage
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=1]{energy_histogram_T24.eps}\par\protect\caption{\scriptsize Energy histogram for $T=2.4$.}\end{center}\end{figure}
+		
+		The results on the dependence of the four quantities on temperature are next. In the case of the energy:\\
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=0.95]{temperature_energy.eps}\par\protect\caption{\scriptsize Energy dependence on temperature for several lattice sizes.}\end{center}\end{figure}
+		
+		For the magnetisation:\\
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=0.95]{temperature_magnetisation.eps}\par\protect\caption{\scriptsize Magnetisation dependence on temperature for several lattice sizes.}\end{center}\end{figure}
+		
+		For the specific heat:\\
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=0.9]{temperature_cv.eps}\par\protect\caption{\scriptsize Specific heat dependence on temperature for several lattice sizes.}\end{center}\end{figure}
+		
+		And for the susceptibility:\\
+		
+		\begin{figure}[ht!]\begin{center}\includegraphics[scale=0.9]{temperature_chi.eps}\par\protect\caption{\scriptsize Susceptibility dependence on temperature for several lattice sizes.}\end{center}\end{figure}
+		
+		Finally, using the maximum values from the specific heat plot it is possible to estimate the critical temperature for each size. Thus, subtracting two instances of the equation with different values of $L$ it is possible to find an estimate of the value of $a$, it was approximately $3/4$ after averaging the results from the five cases. Using this and the result with the biggest lattice the final value for the critical temperature was $T_C\left(\infty\right)\approx2.275$, which is an error of less than $1\%$.\\
+		
+	\section{Conclusions}
+	
+		As it can be seen in the table, the results from the algorithm are very good. For the highest amount of MC cycles the error lies in the order of the millionth part (except for the specific heat where it's somewhat bigger, still very precise). And not only that but all four results converge to the right value in a very orderly and stable way. Considering that the program was not paralysed when it was working on those simulations, the potential for very high precision is quite high.\\
+		
+		In the case of the expectation values of the energy and the magnetisation as a function of MC cycles (figures one to four), not a lot of them are needed to reach equilibrium, especially when starting from an ordered state and for the lower temperature. The only remarkable aspect is the fact that for $T=2.4$ the systems converge to a null magnetisation, meaning that the critical temperature must be smaller than $2.4$ (but higher than $1$), because the phase transition from ferromagnetism to paramagnetism has already happen. The magnetisation is also slower when it comes to reaching a stationary state compared with the energy.\\
+		
+		The acceptance rate (figure five) shows a clear increasing trend as temperature increases too. This is logical, since higher temperatures will lead to values closer to $1$ for the exponential term $\exp{\left(-dE/T\right)}$, thus making it less possible to reject a move as this is decided by comparing that value with a random uniform number from $\left[0,1\right]$.\\
+		
+		As for the energy histograms (figures six and seven), the results agree with the theoretical expectations, namely that when the temperature is higher the common values that the energy takes are more spread out and less concentrated on a set of select values because there is less order and the interaction energy is less relevant to the "thermal" energy in the system thanks to the higher temperature. When the temperature is is $2.4$ the histogram is approximately $50$ times wider (a $0.01$ binning was used for both) compared to when it's only $1$. This agrees well with the values for the specific heat (which is basically the energy variance divided by the temperature squared), the one for $2.4$ being more than an order of magnitude higher than the one for $1$.\\
+		
+		When looking at the plots with the dependence of the expectation values with the temperature (figures eight to twelve) it is better to concentrate on magnetisation, specific heat and susceptibility (they show quite accurately the critical temperature), since the energy plot is not very telling of what is going on in the system. The reason for this is simple, the variations on the specific heat close to the critical temperature are much smaller than the ones seen in the susceptibility when the size of the system changes. This is why only the line for $L=20$ shows a different behaviour in both the energy and specific heat plots (the other four) are very similar thanks to this. Looking a the magnetisation, there is a sharp spike in the critical temperature, this is due to the long range, system-spanning spatial correlations typical of critical systems. The spins become more correlated and this makes the magnetisation increase a lot. The plot of the susceptibility makes the transition from ferromagnet to paramagnet obvious as the critical temperature is overcame, it is also very apparent how bigger systems are closer to the ideal behaviour and how the phase changes closer and closer to the critical temperature.\\
+		
+		Finally, it would be interesting in a future work to attempt a series of simulations with a very big range of system sizes and see how the scaling looks like, so a numerical attempt to calculate the critical exponents could be carried out to test the limits of the Monte Carlo Metropolis algorithm. It would also be good to compare results from two and three dimensions and see if the quality of the results is affected by this.\\
+		
+\end{document}
