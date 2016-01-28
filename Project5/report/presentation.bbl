@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{alder}
+B.~J. Alder and T.~E. Wainwright.
+\newblock Phase transition for a hard sphere system.
+\newblock {\em The Journal of Chemical Physics}, 27:1208 -- 1209, 1957.
+
+\bibitem{argon}
+A.~Rahman.
+\newblock Correlations in the motion of atoms in liquid argon.
+\newblock {\em Phys. Rev.}, 136:A405 -- A411, 1964.
+
+\bibitem{virus}
+Theoretical and C.~B.~G. at~University of Illinois~at Urbana-Champaign.
+\newblock Molecular dynamics of viruses.
+\newblock {\url{http://www.ks.uiuc.edu/Research/STMV/}}.
+
+\bibitem{understanding}
+M.~E. Tuckerman* and G.~J. Martyna.
+\newblock Understanding modern molecular dynamics: Techniques and applications.
+\newblock {\em The Journal of Physical Chemistry B}, 104(2):159 -- 178, 2000.
+
+\end{thebibliography}

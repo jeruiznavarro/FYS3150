@@ -20,7 +20,7 @@ int main() {
     VelocityVerlet *integrator = new VelocityVerlet();
     //EulerCromer *integrator = new EulerCromer();
     system.setIntegrator(integrator);
-    system.createFCCLattice(5, UnitConverter::lengthFromAngstroms(5.26), 687.5);
+    system.createFCCLattice(5, UnitConverter::lengthFromAngstroms(5.26), 700.0);
     system.removeMomentum();
     LennardJones *potential = new LennardJones(3.405, 1.);
     system.setPotential(potential);
@@ -38,9 +38,9 @@ int main() {
         system.step(dt, thermostat, neighbourlist);
         statisticsSampler.sample(system);
         movie->saveState(system);
-        if(timestep % 10 == 0) {
+        //if(timestep % 10 == 0) {
             output->saveOutput(system, statisticsSampler);
-        }
+        //}
         if(timestep % 100 == 0) {
             cout << timestep << endl;
         }

@@ -22,7 +22,6 @@ void VelocityVerlet::move(System *system, Neighbourlists *neighbourlist, double 
     for(unsigned int i=0; i<system->atoms().size(); i++) {
         Atom *atom = system->atoms()[i];
         atom->position.addAndMultiply(atom->velocity, dt);
-        atom->unwrappedPosition.addAndMultiply(atom->velocity, dt);
     }
     system->applyPeriodicBoundaryConditions();
     if(m_firstStep) {

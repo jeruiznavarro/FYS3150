@@ -29,9 +29,11 @@ void System::applyPeriodicBoundaryConditions() {
         for(unsigned int j=0; j<3; j++) {
             if(atom->position[j] < 0.) {
                 atom->position[j] += systemSize()[j];
+                atom->unwrappedPosition[j] -= systemSize()[j];
             }
             if(atom->position[j] >= systemSize()[j]) {
                 atom->position[j] -= systemSize()[j];
+                atom->unwrappedPosition[j] += systemSize()[j];
             }
         }
     }
